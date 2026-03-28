@@ -7,7 +7,7 @@ Organization templates for deploying multiagent teams. Each template defines age
 ## Tested With
 
 - [OpenClaw](https://openclaw.ai) — open-source multiagent CLI
-- [ClawMax](https://clawmax.ai) — multiagent orchestration dashboard
+- [ClawMax](https://clawmax.ai) — multiagent orchestration platform
 
 ## Structure
 
