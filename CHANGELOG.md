@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.5 - 2026-03-29
+
+Issue-template and CI follow-up.
+
+- Adds a template-guidance issue form and a direct contribution-guidance link in the New Issue flow
+- Updates CI to provision Go 1.24 so `actionlint` installs cleanly again
+- Improves `./setup.sh` messaging and fallback behavior when local Go is too old for the current `actionlint` release
+
 ## v0.1.4 - 2026-03-29
 
 Dependency refresh follow-up.

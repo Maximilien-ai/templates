@@ -1,0 +1,102 @@
+name: Template guidance
+description: Ask for guidance on a template contribution, template structure, or submission readiness before opening a pull request.
+title: "[Template guidance]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting, review the [template contribution guide](https://github.com/Maximilien-ai/templates/blob/main/docs/CONTRIBUTING.md).
+
+        Use this issue when you want early feedback on template scope, structure, validation readiness, or workflow-template dependencies before opening a PR.
+
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Submission type
+      description: What kind of guidance do you need?
+      options:
+        - New template proposal
+        - Pre-PR readiness check
+        - Template structure question
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Template summary
+      description: Describe the template you want to contribute or the area where you want guidance.
+      placeholder: A customer success team template for onboarding, renewal tracking, and escalation handoff.
+    validations:
+      required: true
+
+  - type: input
+    id: category
+    attributes:
+      label: Template category
+      description: Expected values are `business`, `technical`, or `personal`.
+      placeholder: business
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Template tags
+      description: Comma-separated tags that describe the use case.
+      placeholder: customer-success, renewals, onboarding
+    validations:
+      required: true
+
+  - type: textarea
+    id: agents_workflows
+    attributes:
+      label: Planned agents and workflows
+      description: List the main agents and workflows you expect to include.
+      placeholder: |
+        Agents: customer-success-manager, onboarding-specialist, renewal-manager
+        Workflows: kickoff, onboarding-review, renewal-risk-check, escalation-handoff
+    validations:
+      required: true
+
+  - type: textarea
+    id: workflow_dependencies
+    attributes:
+      label: Workflow template dependencies
+      description: Note whether this template depends on reusable workflow templates from `Maximilien-ai/workflows`.
+      placeholder: No reusable workflow dependency, or link the related workflow repo PR/issue.
+    validations:
+      required: true
+
+  - type: input
+    id: tested_openclaw
+    attributes:
+      label: Tested OpenClaw version
+      description: If relevant, include the exact OpenClaw version you used.
+      placeholder: v0.9.0
+
+  - type: input
+    id: tested_clawmax
+    attributes:
+      label: Tested ClawMax version
+      description: If relevant, include the exact ClawMax version you used.
+      placeholder: v1.4.2
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Local validation status
+      description: If you already have a branch, list the commands you ran or any failures you hit. If not, say that this is still in planning.
+      placeholder: |
+        Ran `./setup.sh`
+        Ran `./format.sh`
+        Ran `./lint.sh`
+        Ran `./test.sh`
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Add links, mockups, draft PRs, related issues, or anything maintainers should review first.

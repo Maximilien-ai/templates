@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Template contribution guidance
+    url: https://github.com/Maximilien-ai/templates/blob/main/docs/CONTRIBUTING.md
+    about: Review the template submission checklist, validation steps, and good-submission examples before opening an issue or PR.
   - name: Template spec and workflow repository
     url: https://github.com/Maximilien-ai/workflows
     about: Submit reusable workflow templates there first or at the same time when your template depends on them.
