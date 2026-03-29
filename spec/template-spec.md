@@ -1,7 +1,7 @@
 # TEMPLATE.md Specification
 
 > **Version:** 1.0.0
-> **Status:** Draft — stabilizing before public release (target: after April 4, 2026)
+> **Status:** Ready for review and feedback as part of the v0.1.0 release
 > **Format:** YAML frontmatter + structured Markdown body
 
 ## Overview
@@ -9,6 +9,8 @@
 TEMPLATE.md defines a multiagent team template in a human-readable format. It describes the agents, communication channels, and workflows that make up a deployable team.
 
 Templates can be defined as either `template.json` (JSON) or `TEMPLATE.md` (Markdown). Both are equivalent — the system auto-detects the format.
+
+This release includes multiple working examples in `templates/` and is intended to gather feedback on the format before further stabilization. Contributions and additional examples are welcome.
 
 ## Format
 

@@ -1,6 +1,6 @@
 # Multiagent Team Templates
 
-> **Status:** Work in Progress — format stabilizing, expect changes before v1.0
+> **Status:** v0.1.0 review release — TEMPLATE.md spec is ready for review and feedback
 
 Organization templates for deploying multiagent teams. Each template defines agents, communication channels, workflows, and a kickoff sequence.
 
@@ -98,6 +98,8 @@ All templates include:
 ## Contributing
 
 Contributions welcome. Please follow the TEMPLATE.md format and include both `.md` and `.json` versions.
+
+If you have a template pattern or example to contribute, open a PR and submit it for review.
 
 ## License
 
