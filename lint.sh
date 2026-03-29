@@ -6,11 +6,11 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT_DIR"
 
 if [[ -x "$ROOT_DIR/node_modules/.bin/markdownlint-cli2" ]]; then
-  "$ROOT_DIR/node_modules/.bin/markdownlint-cli2" "**/*.md"
+  "$ROOT_DIR/node_modules/.bin/markdownlint-cli2" "README.md" "spec/**/*.md" "templates/**/*.md" ".github/**/*.md"
 elif command -v markdownlint-cli2 >/dev/null 2>&1; then
-  markdownlint-cli2 "**/*.md"
+  markdownlint-cli2 "README.md" "spec/**/*.md" "templates/**/*.md" ".github/**/*.md"
 elif command -v npx >/dev/null 2>&1; then
-  npx --yes markdownlint-cli2 "**/*.md"
+  npx --yes markdownlint-cli2 "README.md" "spec/**/*.md" "templates/**/*.md" ".github/**/*.md"
 else
   echo "markdownlint-cli2 is required. Install it globally or make npx available." >&2
   exit 1

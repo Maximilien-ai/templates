@@ -99,6 +99,7 @@ Agent definitions as a Markdown table:
 **Columns:** `id` (required, kebab-case), `name`, `role`, `tags` (comma-separated), `skills` (comma-separated)
 
 Alternative bullet format:
+
 ```markdown
 - **tech-lead**: Technical leadership (tags: lead, engineering) (skills: github)
 ```
@@ -143,6 +144,7 @@ You are the Tech Lead. Your team just came online.
 ```
 
 **Metadata lines** (parsed from `- **Key:** value`):
+
 - `Schedule`: cron expression, `manual`, or `once`
 - `Mode`: `automated` or `managed (owner: agent-id)`
 - `Targets`: `agents: a, b; groups: g1; tags: t1`
@@ -152,6 +154,7 @@ You are the Tech Lead. Your team just came online.
 ## Validation
 
 On import, the template is validated against the organization template JSON schema:
+
 - `name` must be non-empty
 - `type` must be `"organization"` or `"agent"`
 - `agents` must have at least one entry with a valid `id`
@@ -167,7 +170,7 @@ On import, the template is validated against the organization template JSON sche
 ## File Location
 
 Templates are stored in directories:
-```
+```text
 TEMPLATES/organizations/{slug}/
   template.json    # JSON format (primary)
   TEMPLATE.md      # Markdown format (equivalent)

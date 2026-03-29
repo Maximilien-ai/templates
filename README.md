@@ -11,7 +11,7 @@ Organization templates for deploying multiagent teams. Each template defines age
 
 ## Structure
 
-```
+```text
 spec/                          # Format specification
   template-spec.md             # TEMPLATE.md format spec
 templates/                     # Organization templates
@@ -90,6 +90,7 @@ See [spec/template-spec.md](spec/template-spec.md) for the full specification.
 | Personal | Technical Writing | 4 | 5 |
 
 All templates include:
+
 - Kickoff workflow with user-fillable Project Configuration
 - DAG dependencies between workflows
 - GitHub coordination skills (where applicable)
