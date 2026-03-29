@@ -1,0 +1,75 @@
+name: Community feedback
+description: Report a bug, propose a spec change, or share a suggestion for templates or contribution flow.
+title: "[Feedback]: "
+body:
+  - type: checkboxes
+    id: feedback_type
+    attributes:
+      label: Feedback type
+      description: Select all that apply.
+      options:
+        - label: Spec change
+        - label: Bug
+        - label: Suggestion
+        - label: Documentation
+        - label: Submission support
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is the problem, proposal, or suggestion?
+      placeholder: The current template format does not make it clear how reusable workflow dependencies should be referenced.
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Why this matters
+      description: Describe the user impact, reviewer impact, or implementation impact.
+      placeholder: Community contributors may submit incompatible templates because the expected dependency flow is unclear.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce or evaluate
+      description: Required for bugs. If this is not a bug, describe how a reviewer can evaluate the proposal.
+      placeholder: |
+        1. Open ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior or proposed outcome
+      description: What should happen instead?
+    validations:
+      required: true
+
+  - type: input
+    id: tested_openclaw
+    attributes:
+      label: Tested OpenClaw version
+      description: If relevant, include the exact OpenClaw version.
+      placeholder: v0.8.1
+
+  - type: input
+    id: tested_clawmax
+    attributes:
+      label: Tested ClawMax version
+      description: If relevant, include the exact ClawMax version.
+      placeholder: v1.2.0
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Links, screenshots, prior discussion, related PRs, or related workflow repo changes.

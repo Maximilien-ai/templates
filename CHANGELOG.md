@@ -1,5 +1,23 @@
 # Changelog
 
+## v0.1.3 - 2026-03-29
+
+Contributor guidance and submission example improvements.
+
+- Adds `docs/CONTRIBUTING.md` with submission expectations and local dev/test workflow
+- Adds example good-submission fixtures for pull requests and community feedback issues
+- Adds optional `testedWith` schema and validator checks for explicit platform/version metadata
+- Links the new guidance and examples from the repository README
+
+## v0.1.2 - 2026-03-29
+
+Community submission and formatting improvements.
+
+- Adds issue and pull request templates for bugs, suggestions, spec changes, and template submissions
+- Adds `./format.sh` and pinned Prettier support for Markdown normalization
+- Documents contributor expectations for template goal, category, tags, included agents and workflows, workflow dependency submissions, and tested OpenClaw or ClawMax versions
+- Prepares the repository for wider community submissions and feedback
+
 ## v0.1.1 - 2026-03-29
 
 Repository quality gates, tooling, and governance updates.

@@ -251,8 +251,14 @@ def parse_workflows_section(lines: list[str]) -> list[dict[str, Any]]:
         workflow_name = line[4:].strip()
         i += 1
 
+        while i < len(lines) and not lines[i].strip():
+            i += 1
+
         metadata: dict[str, Any] = {}
         while i < len(lines):
+            if not lines[i].strip():
+                i += 1
+                continue
             metadata_match = METADATA_RE.match(lines[i].strip())
             if not metadata_match:
                 break
@@ -347,6 +353,20 @@ def expect_string_list(errors: list[str], path: Path, value: Any, label: str) ->
         fail(errors, path, f"{label} must be a list of non-empty strings")
 
 
+def validate_tested_with(errors: list[str], path: Path, value: Any, label: str) -> None:
+    if not isinstance(value, list):
+        fail(errors, path, f"{label} must be a list")
+        return
+
+    for index, item in enumerate(value):
+        item_label = f"{label}[{index}]"
+        if not isinstance(item, dict):
+            fail(errors, path, f"{item_label} must be an object")
+            continue
+        expect_nonempty_string(errors, path, item.get("platform"), f"{item_label}.platform")
+        expect_nonempty_string(errors, path, item.get("version"), f"{item_label}.version")
+
+
 def validate_core_template(data: dict[str, Any], path: Path, errors: list[str]) -> None:
     expect_nonempty_string(errors, path, data.get("name"), "name")
     template_type = data.get("type")
@@ -367,6 +387,8 @@ def validate_core_template(data: dict[str, Any], path: Path, errors: list[str]) 
         expect_nonempty_string(errors, path, data.get("author"), "author")
     if "tags" in data:
         expect_string_list(errors, path, data.get("tags"), "tags")
+    if "testedWith" in data:
+        validate_tested_with(errors, path, data.get("testedWith"), "testedWith")
 
     agents = data.get("agents")
     if not isinstance(agents, list) or not agents:
@@ -619,6 +641,17 @@ def compare_template_pair(
     markdown_tags = sorted(markdown_data.metadata.get("tags", []))
     if json_tags != markdown_tags:
         fail(errors, directory, "template.json and TEMPLATE.md differ for top-level tags")
+
+    json_tested_with = sorted(
+        (item.get("platform", ""), item.get("version", ""))
+        for item in json_data.get("testedWith", [])
+    )
+    markdown_tested_with = sorted(
+        (item.get("platform", ""), item.get("version", ""))
+        for item in markdown_data.metadata.get("testedWith", [])
+    )
+    if json_tested_with != markdown_tested_with:
+        fail(errors, directory, "template.json and TEMPLATE.md differ for top-level testedWith")
 
     if {agent["id"] for agent in json_data.get("agents", [])} != {
         agent["id"] for agent in markdown_data.agents
