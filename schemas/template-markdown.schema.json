@@ -53,6 +53,27 @@
             "type": "string",
             "minLength": 1
           }
+        },
+        "testedWith": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "platform",
+              "version"
+            ],
+            "properties": {
+              "platform": {
+                "type": "string",
+                "minLength": 1
+              },
+              "version": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": true
+          }
         }
       },
       "additionalProperties": true

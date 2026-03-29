@@ -1,7 +1,13 @@
 {
   "name": "templates-repo-tools",
   "private": true,
+  "scripts": {
+    "format": "./format.sh",
+    "lint": "./lint.sh",
+    "test": "./test.sh"
+  },
   "devDependencies": {
-    "markdownlint-cli2": "^0.18.1"
+    "markdownlint-cli2": "^0.18.1",
+    "prettier": "^3.6.2"
   }
 }

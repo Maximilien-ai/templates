@@ -22,12 +22,12 @@ A multiagent software development team with engineering, QA, and DevOps roles. A
 
 ## Agents
 
-| id | name | role | tags | skills |
-|----|------|------|------|--------|
-| tech-lead | Tech Lead | Technical leadership — sets architecture direction, reviews complex PRs, unblocks engineers, and manages technical debt priorities | lead, engineering, architecture | github, gh-issues |
-| engineer | Software Engineer | Feature development — writes code, submits PRs, fixes bugs, writes tests, and participates in code review | engineering, development | github, gh-issues |
-| qa-engineer | QA Engineer | Quality assurance — writes and runs test suites, performs regression testing, validates bug fixes, and tracks test coverage | engineering, qa, testing | github, gh-issues |
-| devops | DevOps Engineer | Infrastructure & CI/CD — maintains build pipelines, monitors deployments, manages environments, and triages CI failures | engineering, devops, infrastructure | github, gh-issues |
+| id          | name              | role                                                                                                                               | tags                                | skills            |
+| ----------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ----------------- |
+| tech-lead   | Tech Lead         | Technical leadership — sets architecture direction, reviews complex PRs, unblocks engineers, and manages technical debt priorities | lead, engineering, architecture     | github, gh-issues |
+| engineer    | Software Engineer | Feature development — writes code, submits PRs, fixes bugs, writes tests, and participates in code review                          | engineering, development            | github, gh-issues |
+| qa-engineer | QA Engineer       | Quality assurance — writes and runs test suites, performs regression testing, validates bug fixes, and tracks test coverage        | engineering, qa, testing            | github, gh-issues |
+| devops      | DevOps Engineer   | Infrastructure & CI/CD — maintains build pipelines, monitors deployments, manages environments, and triages CI failures            | engineering, devops, infrastructure | github, gh-issues |
 
 ## Communities
 
@@ -43,6 +43,7 @@ A multiagent software development team with engineering, QA, and DevOps roles. A
 ## Workflows
 
 ### Team Kickoff
+
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: tech-lead; tags: lead
@@ -52,6 +53,7 @@ A multiagent software development team with engineering, QA, and DevOps roles. A
 You are the Tech Lead. Your team just came online.
 
 ## Project Configuration
+
 > **Customize these before applying:**
 
 - **Repository:** [e.g., owner/repo — the codebase to work on]
@@ -61,6 +63,7 @@ You are the Tech Lead. Your team just came online.
 - **Branch strategy:** [e.g., feature branches off main, GitFlow]
 
 ## Your Tasks
+
 1. Introduce yourself in the Dev Team community
 2. Clone the repo and review the codebase architecture
 3. Assign initial focus areas to each engineer
@@ -68,7 +71,8 @@ You are the Tech Lead. Your team just came online.
 5. Kick off the first PR review cycle and daily standup
 
 ### PR Review
-- **Schedule:** 0 */2 * * *
+
+- **Schedule:** 0 _/2 _ \* \*
 - **Mode:** automated
 - **Targets:** groups: Engineering
 
@@ -81,7 +85,8 @@ You are the Tech Lead. Your team just came online.
 5. Flag any PRs open longer than 48 hours for tech lead attention
 
 ### CI Triage
-- **Schedule:** 0 * * * *
+
+- **Schedule:** 0 \* \* \* \*
 - **Mode:** automated
 - **Targets:** agents: devops; groups: DevOps
 
@@ -94,6 +99,7 @@ You are the Tech Lead. Your team just came online.
 5. Post CI health summary to DevOps group
 
 ### Release Prep
+
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** groups: Engineering, QA
@@ -107,7 +113,8 @@ You are the Tech Lead. Your team just came online.
 5. Final sign-off from tech lead, then trigger deployment
 
 ### Daily Standup
-- **Schedule:** 30 9 * * *
+
+- **Schedule:** 30 9 \* \* \*
 - **Mode:** automated
 - **Targets:** groups: Status
 
