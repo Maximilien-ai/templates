@@ -52,6 +52,12 @@
         "minLength": 1
       }
     },
+    "testedWith": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/testedPlatform"
+      }
+    },
     "parameters": {
       "type": "array",
       "items": {
@@ -118,6 +124,22 @@
         },
         "max": {
           "type": "integer"
+        }
+      },
+      "additionalProperties": true
+    },
+    "testedPlatform": {
+      "type": "object",
+      "required": [
+        "platform",
+        "version"
+      ],
+      "properties": {
+        "platform": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "version": {
+          "$ref": "#/$defs/nonEmptyString"
         }
       },
       "additionalProperties": true
