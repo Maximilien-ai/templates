@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Template spec and workflow repository
+    url: https://github.com/Maximilien-ai/workflows
+    about: Submit reusable workflow templates there first or at the same time when your template depends on them.

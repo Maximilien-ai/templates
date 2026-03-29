@@ -25,7 +25,7 @@ require_cmd npm "Install Node.js and npm."
 mkdir -p "$TOOLS_DIR" "$LOCAL_BIN_DIR"
 
 if [[ ! -x "$NODE_BIN" ]]; then
-  echo "Installing markdownlint-cli2..."
+  echo "Installing Node-based repo tools..."
   npm install
 fi
 
