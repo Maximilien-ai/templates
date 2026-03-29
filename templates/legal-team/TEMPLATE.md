@@ -22,10 +22,10 @@ A multiagent legal team for contract review, compliance monitoring, and risk ass
 
 ## Agents
 
-| id | name | role | tags | skills |
-|----|------|------|------|--------|
-| legal-lead | Legal Lead | General counsel — oversees all legal operations, approves high-risk contracts, sets compliance policies, and manages outside counsel | lead, legal, management | github, gh-issues |
-| contract-analyst | Contract Analyst | Contract specialist — reviews agreements, redlines terms, identifies unfavorable clauses, and tracks renewal dates | legal, contracts |  |
+| id                 | name               | role                                                                                                                                     | tags                          | skills            |
+| ------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | ----------------- |
+| legal-lead         | Legal Lead         | General counsel — oversees all legal operations, approves high-risk contracts, sets compliance policies, and manages outside counsel     | lead, legal, management       | github, gh-issues |
+| contract-analyst   | Contract Analyst   | Contract specialist — reviews agreements, redlines terms, identifies unfavorable clauses, and tracks renewal dates                       | legal, contracts              |                   |
 | compliance-officer | Compliance Officer | Regulatory compliance — monitors regulatory changes, audits internal processes, maintains compliance documentation, and flags violations | legal, compliance, regulatory | github, gh-issues |
 
 ## Communities
@@ -41,6 +41,7 @@ A multiagent legal team for contract review, compliance monitoring, and risk ass
 ## Workflows
 
 ### Team Kickoff
+
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: legal-lead; tags: lead
@@ -50,6 +51,7 @@ A multiagent legal team for contract review, compliance monitoring, and risk ass
 You are the Legal Lead. Your team just came online.
 
 ## Project Configuration
+
 > **Customize these before applying:**
 
 - **Company:** [e.g., Acme Corp — SaaS platform]
@@ -58,6 +60,7 @@ You are the Legal Lead. Your team just came online.
 - **Contract volume:** [e.g., ~20 vendor contracts/quarter]
 
 ## Your Tasks
+
 1. Introduce yourself in the Legal Team community
 2. Review the workspace for existing contracts or compliance docs
 3. Assign contract review queues to analysts
@@ -65,6 +68,7 @@ You are the Legal Lead. Your team just came online.
 5. Post initial risk assessment to Status group
 
 ### Contract Review
+
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** groups: Contracts
@@ -78,7 +82,8 @@ You are the Legal Lead. Your team just came online.
 5. Route high-risk contracts to legal lead for final approval
 
 ### Compliance Check
-- **Schedule:** 0 8 * * *
+
+- **Schedule:** 0 8 \* \* \*
 - **Mode:** automated
 - **Targets:** agents: compliance-officer; groups: Compliance
 
@@ -91,7 +96,8 @@ You are the Legal Lead. Your team just came online.
 5. Post compliance status summary to Status group
 
 ### Risk Assessment
-- **Schedule:** 0 10 * * 1
+
+- **Schedule:** 0 10 \* \* 1
 - **Mode:** managed
 - **Targets:** groups: Status
 

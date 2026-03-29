@@ -38,8 +38,8 @@ parameters:
 Agents in an org template can reference an **agent template** by adding a `template` field:
 
 ```markdown
-| id | name | role | tags | skills | template |
-|----|------|------|------|--------|----------|
+| id        | name      | role                 | tags | skills | template        |
+| --------- | --------- | -------------------- | ---- | ------ | --------------- |
 | tech-lead | Tech Lead | Technical leadership | lead | github | senior-engineer |
 ```
 
@@ -49,6 +49,7 @@ Similarly, workflows can reference **workflow templates** stored in `WORKFLOWS/t
 
 ```markdown
 ### PR Review
+
 - **Template:** pr-review-standard
 ```
 
@@ -56,20 +57,20 @@ This allows reusable workflow definitions across multiple org templates.
 
 #### Required Fields
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `name` | string | Human-readable template name |
-| `type` | `"organization"` or `"agent"` | Template type |
+| Field  | Type                          | Description                  |
+| ------ | ----------------------------- | ---------------------------- |
+| `name` | string                        | Human-readable template name |
+| `type` | `"organization"` or `"agent"` | Template type                |
 
 #### Optional Fields
 
-| Field | Type | Default | Description |
-|-------|------|---------|-------------|
-| `version` | string | `"1.0.0"` | Semantic version (X.Y.Z) |
-| `category` | string | — | `"business"`, `"technical"`, or `"personal"` |
-| `author` | string | — | Template author |
-| `tags` | string[] | `[]` | Searchable tags |
-| `parameters` | object[] | — | Scalable agent parameters (agentId, label, default, min, max) |
+| Field        | Type     | Default   | Description                                                   |
+| ------------ | -------- | --------- | ------------------------------------------------------------- |
+| `version`    | string   | `"1.0.0"` | Semantic version (X.Y.Z)                                      |
+| `category`   | string   | —         | `"business"`, `"technical"`, or `"personal"`                  |
+| `author`     | string   | —         | Template author                                               |
+| `tags`       | string[] | `[]`      | Searchable tags                                               |
+| `parameters` | object[] | —         | Scalable agent parameters (agentId, label, default, min, max) |
 
 ### Markdown Body (structured sections)
 
@@ -90,10 +91,10 @@ Agent definitions as a Markdown table:
 ```markdown
 ## Agents
 
-| id | name | role | tags | skills |
-|----|------|------|------|--------|
-| tech-lead | Tech Lead | Technical leadership | lead, engineering | github, gh-issues |
-| engineer | Software Engineer | Feature development | engineering | github |
+| id        | name              | role                 | tags              | skills            |
+| --------- | ----------------- | -------------------- | ----------------- | ----------------- |
+| tech-lead | Tech Lead         | Technical leadership | lead, engineering | github, gh-issues |
+| engineer  | Software Engineer | Feature development  | engineering       | github            |
 ```
 
 **Columns:** `id` (required, kebab-case), `name`, `role`, `tags` (comma-separated), `skills` (comma-separated)
@@ -133,6 +134,7 @@ Each workflow is a `###` subsection with metadata and content:
 ## Workflows
 
 ### Team Kickoff
+
 - **Schedule:** manual
 - **Mode:** managed (owner: tech-lead)
 - **Targets:** agents: tech-lead
@@ -170,6 +172,7 @@ On import, the template is validated against the organization template JSON sche
 ## File Location
 
 Templates are stored in directories:
+
 ```text
 TEMPLATES/organizations/{slug}/
   template.json    # JSON format (primary)

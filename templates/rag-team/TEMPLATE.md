@@ -33,13 +33,13 @@ A multiagent team that builds end-to-end RAG solutions using weave-cli. Includes
 
 ## Agents
 
-| id | name | role | tags | skills |
-|----|------|------|------|--------|
-| planner | RAG Planner | Solution Architect | planner, lead | weave-planner, weave-setup |
-| data-engineer | Data Engineer | Data Ingestion Specialist | data, ingest | weave-ingest |
-| search-engineer | Search Engineer | Search & Agent Tuning Specialist | search, qa | weave-search |
-| eval-engineer | Eval Engineer | Quality & Evaluation Specialist | eval, quality | weave-eval |
-| ops-engineer | Ops Engineer | Infrastructure & Deployment Specialist | ops, infra | weave-stack |
+| id              | name            | role                                   | tags          | skills                     |
+| --------------- | --------------- | -------------------------------------- | ------------- | -------------------------- |
+| planner         | RAG Planner     | Solution Architect                     | planner, lead | weave-planner, weave-setup |
+| data-engineer   | Data Engineer   | Data Ingestion Specialist              | data, ingest  | weave-ingest               |
+| search-engineer | Search Engineer | Search & Agent Tuning Specialist       | search, qa    | weave-search               |
+| eval-engineer   | Eval Engineer   | Quality & Evaluation Specialist        | eval, quality | weave-eval                 |
+| ops-engineer    | Ops Engineer    | Infrastructure & Deployment Specialist | ops, infra    | weave-stack                |
 
 ## Communities
 
@@ -57,6 +57,7 @@ A multiagent team that builds end-to-end RAG solutions using weave-cli. Includes
 ## Workflows
 
 ### RAG Setup
+
 - **Schedule:** manual
 - **Mode:** automated
 - **Targets:** tags: planner
@@ -71,6 +72,7 @@ A multiagent team that builds end-to-end RAG solutions using weave-cli. Includes
 6. Report setup status and recommended next steps to the Planning group
 
 ### Data Pipeline
+
 - **Schedule:** manual
 - **Mode:** automated
 - **Targets:** tags: data
@@ -87,6 +89,7 @@ A multiagent team that builds end-to-end RAG solutions using weave-cli. Includes
 8. Report ingestion stats to Data Pipeline group
 
 ### Search Tuning
+
 - **Schedule:** manual
 - **Mode:** automated
 - **Targets:** tags: search
@@ -102,6 +105,7 @@ A multiagent team that builds end-to-end RAG solutions using weave-cli. Includes
 7. Report best search configuration to Search & QA group
 
 ### Eval Cycle
+
 - **Schedule:** manual
 - **Mode:** automated
 - **Targets:** tags: eval
@@ -119,6 +123,7 @@ A multiagent team that builds end-to-end RAG solutions using weave-cli. Includes
 6. Report results and recommendations to Quality group
 
 ### Deploy
+
 - **Schedule:** manual
 - **Mode:** automated
 - **Targets:** tags: ops
@@ -136,13 +141,15 @@ A multiagent team that builds end-to-end RAG solutions using weave-cli. Includes
 9. Report deployment status to Ops group
 
 ### Daily Status
-- **Schedule:** 0 9 * * 1-5
+
+- **Schedule:** 0 9 \* \* 1-5
 - **Mode:** automated
 - **Targets:** groups: Status
 
 ## Daily Status
 
 Report your current status to the team:
+
 1. What did you accomplish since last check-in?
 2. What are you working on now?
 3. Any blockers or issues that need attention?

@@ -251,8 +251,14 @@ def parse_workflows_section(lines: list[str]) -> list[dict[str, Any]]:
         workflow_name = line[4:].strip()
         i += 1
 
+        while i < len(lines) and not lines[i].strip():
+            i += 1
+
         metadata: dict[str, Any] = {}
         while i < len(lines):
+            if not lines[i].strip():
+                i += 1
+                continue
             metadata_match = METADATA_RE.match(lines[i].strip())
             if not metadata_match:
                 break
