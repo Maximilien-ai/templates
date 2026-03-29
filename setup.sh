@@ -10,6 +10,7 @@ TOOLS_DIR="$ROOT_DIR/.tools"
 VENV_DIR="$TOOLS_DIR/venv"
 NODE_BIN="$ROOT_DIR/node_modules/.bin/markdownlint-cli2"
 LOCAL_BIN_DIR="$TOOLS_DIR/bin"
+RUFF_VERSION="$(awk -F'==' '/^ruff==/ { print $2 }' requirements-dev.txt)"
 
 require_cmd() {
   local cmd="$1"
@@ -24,14 +25,17 @@ require_cmd python3 "Install Python 3.12+."
 require_cmd npm "Install Node.js and npm."
 mkdir -p "$TOOLS_DIR" "$LOCAL_BIN_DIR"
 
-if [[ ! -x "$NODE_BIN" ]]; then
+if [[ ! -x "$NODE_BIN" ]] || ! npm ls --depth=0 >/dev/null 2>&1; then
   echo "Installing Node-based repo tools..."
   npm install
 fi
 
-if [[ ! -x "$VENV_DIR/bin/ruff" ]]; then
-  echo "Installing ruff..."
+if [[ ! -d "$VENV_DIR" ]]; then
   python3 -m venv "$VENV_DIR"
+fi
+
+if [[ ! -x "$VENV_DIR/bin/ruff" ]] || [[ "$("$VENV_DIR/bin/ruff" --version | awk '{ print $2 }')" != "$RUFF_VERSION" ]]; then
+  echo "Installing ruff..."
   "$VENV_DIR/bin/python" -m pip install --upgrade pip
   "$VENV_DIR/bin/pip" install -r requirements-dev.txt
 fi

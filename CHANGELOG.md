@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.4 - 2026-03-29
+
+Dependency refresh follow-up.
+
+- Picks up the merged Dependabot updates for GitHub Actions, Node tooling, and Python tooling
+- Fixes `./setup.sh` so it refreshes repo-local dependencies when pinned versions change instead of only when binaries are missing
+
 ## v0.1.3 - 2026-03-29
 
 Contributor guidance and submission example improvements.
