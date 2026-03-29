@@ -101,6 +101,32 @@ Contributions welcome. Please follow the TEMPLATE.md format and include both `.m
 
 If you have a template pattern or example to contribute, open a PR and submit it for review.
 
+## Validation
+
+- JSON templates are defined by [schemas/template.schema.json](schemas/template.schema.json)
+- `TEMPLATE.md` documents are parsed and checked against [schemas/template-markdown.schema.json](schemas/template-markdown.schema.json)
+- Run `python3 scripts/validate_templates.py` to validate all templates locally
+
+## CI
+
+GitHub Actions runs on pull requests and pushes to `main` to:
+
+- lint Markdown
+- lint GitHub Actions and repository Python scripts
+- validate every `templates/*/template.json`
+- validate every `templates/*/TEMPLATE.md`
+- verify that each template directory has both formats and that key metadata stays in sync
+
+For local use, run `./setup.sh`, then `./lint.sh` and `./test.sh`.
+
+## Branch Protection
+
+The desired protection policy for `main` lives in [`.github/branch-protection-main.json`](.github/branch-protection-main.json).
+
+After authenticating GitHub CLI with admin access to the repo, apply it with:
+
+`./scripts/apply_branch_protection.sh`
+
 ## License
 
 MIT

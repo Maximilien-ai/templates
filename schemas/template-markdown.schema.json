@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Maximilien-ai/templates/schemas/template-markdown.schema.json",
+  "title": "TEMPLATE.md Parsed Document",
+  "type": "object",
+  "required": [
+    "metadata",
+    "description",
+    "agents",
+    "communities",
+    "groups",
+    "workflows"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "name",
+        "type",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "organization",
+            "agent"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "business",
+            "technical",
+            "personal"
+          ]
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "agents": {
+      "type": "array",
+      "minItems": 1
+    },
+    "communities": {
+      "type": "array"
+    },
+    "groups": {
+      "type": "array"
+    },
+    "workflows": {
+      "type": "array",
+      "minItems": 1
+    }
+  },
+  "additionalProperties": true
+}
