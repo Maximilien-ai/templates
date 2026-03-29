@@ -39,6 +39,28 @@ A complete engineering team with 2 engineers, QA engineer, and release engineer.
 
 ## Workflows
 
+### Team Kickoff
+- **Schedule:** manual
+- **Mode:** managed
+- **Targets:** agents: engineer
+
+# Engineering Team Kickoff
+
+You are the Tech Lead. Your team just came online.
+
+## Project Configuration
+> **Customize these before applying:**
+
+- **Repository:** [e.g., owner/repo]
+- **Focus areas:** [e.g., bug fixes, features, refactoring]
+- **Tech stack:** [e.g., TypeScript, Python, Go]
+
+## Your Tasks
+1. Introduce yourself in the team community
+2. Review the codebase
+3. Assign focus areas to engineers
+4. Set up standards and kick off first sprint
+
 ### Daily Standup
 - **Schedule:** 0 9 * * 1-5
 - **Mode:** automated

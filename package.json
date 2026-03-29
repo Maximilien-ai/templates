@@ -1,0 +1,7 @@
+{
+  "name": "templates-repo-tools",
+  "private": true,
+  "devDependencies": {
+    "markdownlint-cli2": "^0.18.1"
+  }
+}
