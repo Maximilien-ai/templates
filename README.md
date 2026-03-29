@@ -38,6 +38,11 @@ version: "1.0.0"
 category: technical
 author: ClawMax Team
 tags: [engineering, software]
+testedWith:
+  - platform: OpenClaw
+    version: "0.9.0"
+  - platform: ClawMax
+    version: "1.4.2"
 ---
 
 A multiagent software development team.
@@ -100,21 +105,18 @@ All templates include:
 
 Contributions welcome. Please follow the `TEMPLATE.md` format and include both `.md` and `.json` versions.
 
-For community submissions:
+Start with [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) for the submission checklist, local workflow, and review expectations.
 
-- describe the template goal clearly
-- include the template category and tags
-- list the included agents and workflows
-- state which OpenClaw and/or ClawMax version you tested with
-- include ClawMax-style agent templates or actual OpenClaw agent files when relevant
-- submit reusable workflow templates to `https://github.com/Maximilien-ai/workflows` first or at the same time if your template depends on them
+Known-good examples live in:
 
-Use the PR template when submitting new templates or spec changes.
+- [docs/examples/good-template-submission-pr.md](docs/examples/good-template-submission-pr.md)
+- [docs/examples/good-community-feedback-issue.md](docs/examples/good-community-feedback-issue.md)
 
 ## Validation
 
 - JSON templates are defined by [schemas/template.schema.json](schemas/template.schema.json)
 - `TEMPLATE.md` documents are parsed and checked against [schemas/template-markdown.schema.json](schemas/template-markdown.schema.json)
+- `testedWith` metadata is validated when present so platform/version pairs stay explicit in both formats
 - Run `python3 scripts/validate_templates.py` to validate all templates locally
 - Run `./format.sh` to normalize Markdown before linting
 
