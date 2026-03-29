@@ -5,8 +5,8 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT_DIR"
 
-if [[ -x "$ROOT_DIR/.tools/node_modules/.bin/markdownlint-cli2" ]]; then
-  "$ROOT_DIR/.tools/node_modules/.bin/markdownlint-cli2" "**/*.md"
+if [[ -x "$ROOT_DIR/node_modules/.bin/markdownlint-cli2" ]]; then
+  "$ROOT_DIR/node_modules/.bin/markdownlint-cli2" "**/*.md"
 elif command -v markdownlint-cli2 >/dev/null 2>&1; then
   markdownlint-cli2 "**/*.md"
 elif command -v npx >/dev/null 2>&1; then

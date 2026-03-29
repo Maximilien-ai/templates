@@ -8,7 +8,7 @@ cd "$ROOT_DIR"
 CI_MODE="${1:-}"
 TOOLS_DIR="$ROOT_DIR/.tools"
 VENV_DIR="$TOOLS_DIR/venv"
-NODE_BIN="$TOOLS_DIR/node_modules/.bin/markdownlint-cli2"
+NODE_BIN="$ROOT_DIR/node_modules/.bin/markdownlint-cli2"
 LOCAL_BIN_DIR="$TOOLS_DIR/bin"
 
 require_cmd() {
@@ -26,14 +26,14 @@ mkdir -p "$TOOLS_DIR" "$LOCAL_BIN_DIR"
 
 if [[ ! -x "$NODE_BIN" ]]; then
   echo "Installing markdownlint-cli2..."
-  npm install --prefix "$TOOLS_DIR" markdownlint-cli2
+  npm install
 fi
 
 if [[ ! -x "$VENV_DIR/bin/ruff" ]]; then
   echo "Installing ruff..."
   python3 -m venv "$VENV_DIR"
   "$VENV_DIR/bin/python" -m pip install --upgrade pip
-  "$VENV_DIR/bin/pip" install ruff
+  "$VENV_DIR/bin/pip" install -r requirements-dev.txt
 fi
 
 if [[ ! -x "$LOCAL_BIN_DIR/actionlint" ]] && ! command -v actionlint >/dev/null 2>&1; then
