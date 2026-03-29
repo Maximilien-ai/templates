@@ -28,4 +28,4 @@
 
 - [ ] Consider adding a ruleset if you want bypass allowances for specific non-admin users
 - [ ] Consider adding richer schema checks for tested platform version metadata
-- [ ] Consider adding a sample submission PR in `docs/`
+- [ ] Consider adding example "good submission" fixtures for both PRs and issues so contributors can copy a known-good structure
