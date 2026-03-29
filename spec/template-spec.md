@@ -24,6 +24,11 @@ version: "1.0.0"
 category: technical
 author: ClawMax Team
 tags: [engineering, software, devops]
+testedWith:
+  - platform: OpenClaw
+    version: "0.9.0"
+  - platform: ClawMax
+    version: "1.4.2"
 parameters:
   - agentId: engineer
     label: Number of Engineers
@@ -70,6 +75,7 @@ This allows reusable workflow definitions across multiple org templates.
 | `category`   | string   | —         | `"business"`, `"technical"`, or `"personal"`                  |
 | `author`     | string   | —         | Template author                                               |
 | `tags`       | string[] | `[]`      | Searchable tags                                               |
+| `testedWith` | object[] | `[]`      | Tested platform/version pairs with `platform` and `version`   |
 | `parameters` | object[] | —         | Scalable agent parameters (agentId, label, default, min, max) |
 
 ### Markdown Body (structured sections)
@@ -162,6 +168,7 @@ On import, the template is validated against the organization template JSON sche
 - `agents` must have at least one entry with a valid `id`
 - Agent IDs must be kebab-case (`^[a-z][a-z0-9-]*$`)
 - `version` must be semantic (X.Y.Z)
+- `testedWith` entries, if present, must include non-empty `platform` and `version` values
 
 ## Compatibility
 

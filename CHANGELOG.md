@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.1.3 - 2026-03-29
+
+Contributor guidance and submission example improvements.
+
+- Adds `docs/CONTRIBUTING.md` with submission expectations and local dev/test workflow
+- Adds example good-submission fixtures for pull requests and community feedback issues
+- Adds optional `testedWith` schema and validator checks for explicit platform/version metadata
+- Links the new guidance and examples from the repository README
+
 ## v0.1.2 - 2026-03-29
 
 Community submission and formatting improvements.
