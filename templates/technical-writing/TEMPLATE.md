@@ -10,6 +10,9 @@ tags:
   - documentation
   - editing
   - publishing
+testedWith:
+  - platform: ClawMax
+    version: v1.1.21
 parameters:
   - agentId: writer
     label: Number of Writers

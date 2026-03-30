@@ -43,7 +43,7 @@ A complete engineering team with 2 engineers, QA engineer, and release engineer.
 
 - **Schedule:** manual
 - **Mode:** managed
-- **Targets:** agents: engineer
+- **Targets:** agents: engineer, qa-engineer, release-engineer
 
 # Engineering Team Kickoff
 
@@ -56,6 +56,7 @@ You are the Tech Lead. Your team just came online.
 - **Repository:** [e.g., owner/repo]
 - **Focus areas:** [e.g., bug fixes, features, refactoring]
 - **Tech stack:** [e.g., TypeScript, Python, Go]
+- **GitHub repo:** [e.g., owner/repo — for coordination and tracking]
 
 ## Your Tasks
 

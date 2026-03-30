@@ -11,6 +11,9 @@ tags:
   - complete
   - development
   - devops
+testedWith:
+  - platform: ClawMax
+    version: v1.1.21
 parameters:
   - agentId: engineer
     label: Number of Engineers
@@ -29,7 +32,7 @@ parameters:
     max: 5
 ---
 
-A complete startup team with CEO, product manager, engineers, QA, and release engineer. Includes 7 workflows covering the full development lifecycle: standups, status checks, issue triage, PR review, coding, merging, and releases.
+A complete startup team with CEO, product manager, engineers, QA, and release engineer. Includes 8 workflows covering the full development lifecycle: kickoff, standups, status checks, issue triage, PR review, coding, merging, and releases.
 
 ## Agents
 
@@ -58,7 +61,7 @@ A complete startup team with CEO, product manager, engineers, QA, and release en
 
 - **Schedule:** manual
 - **Mode:** managed
-- **Targets:** tags: lead
+- **Targets:** agents: ceo, product-manager, engineer, qa-engineer, release-engineer
 
 # Startup Team Kickoff
 
@@ -71,6 +74,7 @@ Your team just came online.
 - **Company:** [e.g., Acme Corp — early stage startup]
 - **Product:** [e.g., SaaS platform for X]
 - **Priorities:** [e.g., MVP launch, fundraising, hiring]
+- **GitHub repo:** [e.g., owner/repo — for coordination and tracking]
 
 ## Your Tasks
 
