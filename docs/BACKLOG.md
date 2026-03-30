@@ -17,6 +17,7 @@
 - [x] Add and apply branch protection for `main`
 - [x] Update branch protection so admins, including `@maximilien`, can merge without an extra reviewer
 - [x] Fix template drift so the repository passes validation checks
+- [x] Sync repository templates to the current ClawMax template source of truth
 - [x] Document validation, CI, and branch protection workflows in the repository docs
 - [x] Add `docs/CONTRIBUTING.md` for submission and review guidance
 - [x] Add richer schema checks for tested platform version metadata

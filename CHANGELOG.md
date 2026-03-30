@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.6 - 2026-03-30
+
+Template source-of-truth sync.
+
+- Syncs the organization templates in this repo to the current ClawMax template set
+- Keeps verified `testedWith` metadata for the `small-startup-team` and `technical-writing` examples
+- Repairs two source inconsistencies needed for local parity validation while tracking the upstream ClawMax follow-up separately
+
 ## v0.1.5 - 2026-03-29
 
 Issue-template and CI follow-up.

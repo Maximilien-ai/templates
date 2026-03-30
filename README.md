@@ -4,6 +4,8 @@
 
 Organization templates for deploying multiagent teams. Each template defines agents, communication channels, workflows, and a kickoff sequence.
 
+The organization templates in this repository are maintained in sync with the ClawMax source templates in [Maximilien-ai/clawmax](https://github.com/Maximilien-ai/clawmax), with repo-specific validation metadata added here when needed.
+
 ## Tested With
 
 - [OpenClaw](https://openclaw.ai) — open-source multiagent CLI
