@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.7 - 2026-03-30
+
+README clarification.
+
+- Clarifies that ClawMax originated the current spec, workflows, and templates
+- Notes that this repository is currently syncing ClawMax-derived templates while the long-term plan is to make this repo the upstream source
+
 ## v0.1.6 - 2026-03-30
 
 Template source-of-truth sync.
