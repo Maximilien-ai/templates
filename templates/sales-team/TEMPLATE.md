@@ -27,12 +27,12 @@ A multiagent sales organization with pipeline management, lead qualification, an
 
 ## Agents
 
-| id           | name                  | role                                                                                                         | tags                         | skills            |
-| ------------ | --------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
-| sales-lead   | Sales Lead            | VP of Sales — owns pipeline targets, assigns territories, runs forecast reviews, and coaches reps            | lead, sales, management      | github, gh-issues |
-| account-exec | Account Executive     | Closer — manages qualified opportunities through discovery, demo, proposal, and close stages                 | sales, closer, deals         |                   |
-| sdr          | Sales Development Rep | Prospector — identifies leads, sends outbound sequences, qualifies inbound, and books meetings for AEs       | sales, prospecting, outbound |                   |
-| sales-ops    | Sales Operations      | Analytics & operations — maintains CRM hygiene, builds reports, tracks quotas, and optimizes sales processes | sales, analytics, ops        | github, gh-issues |
+| id | name | role | tags | skills |
+|----|------|------|------|--------|
+| sales-lead | Sales Lead | VP of Sales — owns pipeline targets, assigns territories, runs forecast reviews, and coaches reps | lead, sales, management | github, gh-issues |
+| account-exec | Account Executive | Closer — manages qualified opportunities through discovery, demo, proposal, and close stages | sales, closer, deals |  |
+| sdr | Sales Development Rep | Prospector — identifies leads, sends outbound sequences, qualifies inbound, and books meetings for AEs | sales, prospecting, outbound |  |
+| sales-ops | Sales Operations | Analytics & operations — maintains CRM hygiene, builds reports, tracks quotas, and optimizes sales processes | sales, analytics, ops | github, gh-issues |
 
 ## Communities
 
@@ -48,7 +48,6 @@ A multiagent sales organization with pipeline management, lead qualification, an
 ## Workflows
 
 ### Team Kickoff
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: sales-lead; tags: lead
@@ -58,7 +57,6 @@ A multiagent sales organization with pipeline management, lead qualification, an
 You are the Sales Lead. Your team just came online.
 
 ## Project Configuration
-
 > **Customize these before applying:**
 
 - **Product/service:** [e.g., ClawMax enterprise multiagent platform]
@@ -68,7 +66,6 @@ You are the Sales Lead. Your team just came online.
 - **Key competitors:** [e.g., competitor A, competitor B]
 
 ## Your Tasks
-
 1. Introduce yourself in the Sales Team community
 2. Review the workspace for existing CRM data or pipeline info
 3. Assign territories or focus areas to each AE and SDR
@@ -76,8 +73,7 @@ You are the Sales Lead. Your team just came online.
 5. Kick off the first pipeline review in the Pipeline group
 
 ### Pipeline Review
-
-- **Schedule:** 0 9 \* \* \*
+- **Schedule:** 0 9 * * *
 - **Mode:** automated
 - **Targets:** groups: Pipeline
 
@@ -90,8 +86,7 @@ You are the Sales Lead. Your team just came online.
 5. Post summary to Status group
 
 ### Lead Qualification
-
-- **Schedule:** 0 _/4 _ \* \*
+- **Schedule:** 0 */4 * * *
 - **Mode:** automated
 - **Targets:** groups: Prospecting
 
@@ -104,8 +99,7 @@ You are the Sales Lead. Your team just came online.
 5. Update lead status and log qualification notes
 
 ### Deal Forecast
-
-- **Schedule:** 0 10 \* \* 1
+- **Schedule:** 0 10 * * 1
 - **Mode:** managed
 - **Targets:** groups: Deals
 

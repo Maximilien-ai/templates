@@ -21,11 +21,11 @@ A complete engineering team with 2 engineers, QA engineer, and release engineer.
 
 ## Agents
 
-| id               | name             | role                       | tags                              | skills |
-| ---------------- | ---------------- | -------------------------- | --------------------------------- | ------ |
-| engineer         | Engineer         | Software Engineer          | engineer, developer               | github |
-| qa-engineer      | QA Engineer      | Quality Assurance Engineer | engineer, qa, quality             | github |
-| release-engineer | Release Engineer | Release Engineer           | engineer, release-manager, github | github |
+| id | name | role | tags | skills |
+|----|------|------|------|--------|
+| engineer | Engineer | Software Engineer | engineer, developer | github |
+| qa-engineer | QA Engineer | Quality Assurance Engineer | engineer, qa, quality | github |
+| release-engineer | Release Engineer | Release Engineer | engineer, release-manager, github | github |
 
 ## Communities
 
@@ -40,7 +40,6 @@ A complete engineering team with 2 engineers, QA engineer, and release engineer.
 ## Workflows
 
 ### Team Kickoff
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: engineer, qa-engineer, release-engineer
@@ -50,7 +49,6 @@ A complete engineering team with 2 engineers, QA engineer, and release engineer.
 You are the Tech Lead. Your team just came online.
 
 ## Project Configuration
-
 > **Customize these before applying:**
 
 - **Repository:** [e.g., owner/repo]
@@ -59,15 +57,13 @@ You are the Tech Lead. Your team just came online.
 - **GitHub repo:** [e.g., owner/repo — for coordination and tracking]
 
 ## Your Tasks
-
 1. Introduce yourself in the team community
 2. Review the codebase
 3. Assign focus areas to engineers
 4. Set up standards and kick off first sprint
 
 ### Daily Standup
-
-- **Schedule:** 0 9 \* \* 1-5
+- **Schedule:** 0 9 * * 1-5
 - **Mode:** automated
 
 # Engineering Daily Standup
@@ -75,20 +71,16 @@ You are the Tech Lead. Your team just came online.
 Provide your update:
 
 ### Yesterday
-
 - Code completed or PRs merged
 
 ### Today
-
 - Tasks in progress
 
 ### Blockers
-
 - Anything blocking your work?
 
 ### Code Review Reminder
-
-- **Schedule:** 0 10,14 \* \* 1-5
+- **Schedule:** 0 10,14 * * 1-5
 - **Mode:** automated
 - **Targets:** groups: Code Review
 
@@ -102,7 +94,6 @@ Please review pending pull requests:
 4. Approve or request changes
 
 ### PR Review
-
 - **Schedule:** manual
 - **Mode:** automated
 - **Targets:** tags: qa
@@ -110,7 +101,6 @@ Please review pending pull requests:
 # PR Review Workflow
 
 ## Tasks
-
 1. Check for open pull requests on the repository
 2. Review code changes for quality and correctness
 3. Verify tests pass and coverage is adequate
@@ -118,13 +108,11 @@ Please review pending pull requests:
 5. Provide feedback or approve the PR
 
 ## Output
-
 - GitHub review comment (approve or request changes)
 - Test results summary
 
 ### Release Preparation
-
-- **Schedule:** 0 9 \* \* 3
+- **Schedule:** 0 9 * * 3
 - **Mode:** managed
 - **Targets:** groups: Release Team
 

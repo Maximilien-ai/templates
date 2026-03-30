@@ -11,9 +11,6 @@ tags:
   - complete
   - development
   - devops
-testedWith:
-  - platform: ClawMax
-    version: v1.1.21
 parameters:
   - agentId: engineer
     label: Number of Engineers
@@ -32,17 +29,17 @@ parameters:
     max: 5
 ---
 
-A complete startup team with CEO, product manager, engineers, QA, and release engineer. Includes 8 workflows covering the full development lifecycle: kickoff, standups, status checks, issue triage, PR review, coding, merging, and releases.
+A complete startup team with CEO, product manager, engineers, QA, and release engineer. Includes 7 workflows covering the full development lifecycle: standups, status checks, issue triage, PR review, coding, merging, and releases.
 
 ## Agents
 
-| id               | name             | role                       | tags                      | skills |
-| ---------------- | ---------------- | -------------------------- | ------------------------- | ------ |
-| ceo              | CEO              | Chief Executive Officer    | leadership, executive     | github |
-| product-manager  | Product Manager  | Product Manager            | product, manager          | github |
-| engineer         | Engineer         | Software Engineer          | engineer, developer       | github |
-| qa-engineer      | QA Engineer      | Quality Assurance Engineer | engineer, qa, quality     | github |
-| release-engineer | Release Engineer | Release Engineer           | engineer, release-manager | github |
+| id | name | role | tags | skills |
+|----|------|------|------|--------|
+| ceo | CEO | Chief Executive Officer | leadership, executive | github |
+| product-manager | Product Manager | Product Manager | product, manager | github |
+| engineer | Engineer | Software Engineer | engineer, developer | github |
+| qa-engineer | QA Engineer | Quality Assurance Engineer | engineer, qa, quality | github |
+| release-engineer | Release Engineer | Release Engineer | engineer, release-manager | github |
 
 ## Communities
 
@@ -58,7 +55,6 @@ A complete startup team with CEO, product manager, engineers, QA, and release en
 ## Workflows
 
 ### Team Kickoff
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: ceo, product-manager, engineer, qa-engineer, release-engineer
@@ -68,7 +64,6 @@ A complete startup team with CEO, product manager, engineers, QA, and release en
 Your team just came online.
 
 ## Project Configuration
-
 > **Customize these before applying:**
 
 - **Company:** [e.g., Acme Corp — early stage startup]
@@ -77,7 +72,6 @@ Your team just came online.
 - **GitHub repo:** [e.g., owner/repo — for coordination and tracking]
 
 ## Your Tasks
-
 1. Introduce yourself in the team community
 2. Review workspace and existing work
 3. Assign roles and priorities
@@ -85,8 +79,7 @@ Your team just came online.
 5. Kick off first sprint
 
 ### Daily Standup
-
-- **Schedule:** 0 9 \* \* 1-5
+- **Schedule:** 0 9 * * 1-5
 - **Mode:** automated
 - **Targets:** groups: All Hands
 
@@ -95,22 +88,18 @@ Your team just came online.
 Provide your standup update:
 
 ### 1. Yesterday
-
 - What did you complete?
 
 ### 2. Today
-
 - What are your top priorities?
 
 ### 3. Blockers
-
 - Anything blocking your work?
 
 Keep it concise (3-5 bullet points total).
 
 ### Status Check
-
-- **Schedule:** 0 _/2 _ \* 1-5
+- **Schedule:** 0 */2 * * 1-5
 - **Mode:** automated
 - **Targets:** groups: Status
 
@@ -125,8 +114,7 @@ Provide a brief status pulse:
 Keep it to 2-3 sentences.
 
 ### Issue Triage
-
-- **Schedule:** 0 9,14 \* \* 1-5
+- **Schedule:** 0 9,14 * * 1-5
 - **Mode:** automated
 - **Targets:** tags: product
 
@@ -135,21 +123,18 @@ Keep it to 2-3 sentences.
 Review the GitHub repository for new and unresolved issues:
 
 ## Tasks
-
 1. **New issues** (last 24 hours): Add labels (bug/feature/docs/question), assign if obvious owner, request clarification if unclear
 2. **Unassigned issues**: Assign to appropriate team member based on expertise
 3. **Stale issues** (no activity 7+ days): Comment asking for update
 4. **Duplicate issues**: Mark as duplicate with link to original
 
 ## Output
-
 - Summary of issues triaged (new, assigned, stale, closed)
 - Any issues that need leadership attention
 - Post summary to Status group
 
 ### PR Review
-
-- **Schedule:** 0 10,15 \* \* 1-5
+- **Schedule:** 0 10,15 * * 1-5
 - **Mode:** automated
 - **Targets:** tags: qa
 
@@ -158,7 +143,6 @@ Review the GitHub repository for new and unresolved issues:
 Review all open pull requests:
 
 ## Tasks
-
 1. Check for open PRs that need review
 2. For each PR:
    - Review code changes for correctness and quality
@@ -172,13 +156,11 @@ Review all open pull requests:
    - Comment on areas that need improvement
 
 ## Output
-
 - GitHub review comment on each PR (approve or request changes)
 - Summary posted to Status group
 
 ### Coding Sprint
-
-- **Schedule:** 0 10 \* \* 1-5
+- **Schedule:** 0 10 * * 1-5
 - **Mode:** automated
 - **Targets:** tags: engineer
 
@@ -187,7 +169,6 @@ Review all open pull requests:
 Work on your assigned GitHub issues:
 
 ## Tasks
-
 1. Check your assigned issues (filter by your agent ID)
 2. For each assigned issue (prioritize by label: critical > bug > feature):
    - Read the issue description and any comments
@@ -200,14 +181,12 @@ Work on your assigned GitHub issues:
 3. If blocked, comment on the issue explaining the blocker
 
 ## Output
-
 - PR link for each issue worked on
 - Status update posted to Status group
 - Comment on any issues where you're blocked
 
 ### PR Merge
-
-- **Schedule:** 0 11,16 \* \* 1-5
+- **Schedule:** 0 11,16 * * 1-5
 - **Mode:** automated
 - **Targets:** tags: release-manager
 
@@ -216,7 +195,6 @@ Work on your assigned GitHub issues:
 Merge approved pull requests:
 
 ## Tasks
-
 1. List all open PRs with approved reviews
 2. For each approved PR:
    - Verify CI/CD checks pass (all green)
@@ -229,13 +207,11 @@ Merge approved pull requests:
 3. If conflicts exist, notify the PR author
 
 ## Output
-
 - List of merged PRs
 - List of PRs with issues (conflicts, failed CI)
 - Summary posted to Status group
 
 ### Release
-
 - **Schedule:** manual
 - **Mode:** managed (owner: product-manager)
 - **Targets:** tags: release-manager
@@ -245,14 +221,12 @@ Merge approved pull requests:
 Prepare and publish a new release:
 
 ## Pre-Release Checklist
-
 1. **Code freeze**: Verify all planned features are merged
 2. **CI/CD**: All tests passing on main branch
 3. **Open issues**: No critical/blocker issues open
 4. **Documentation**: README and CHANGELOG updated
 
 ## Release Tasks
-
 1. Review all PRs merged since last release
 2. Update CHANGELOG.md with categorized changes (features, fixes, breaking)
 3. Bump version in package.json (semver: patch/minor/major)
@@ -262,7 +236,6 @@ Prepare and publish a new release:
 7. Verify release artifacts are published
 
 ## Output
-
 - Updated CHANGELOG.md
 - New version tag pushed
 - GitHub release created

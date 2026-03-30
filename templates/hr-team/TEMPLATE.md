@@ -22,12 +22,12 @@ A multiagent HR organization handling recruiting, onboarding, and people operati
 
 ## Agents
 
-| id                    | name                  | role                                                                                                                     | tags                 | skills            |
-| --------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------- | ----------------- |
-| hr-lead               | HR Lead               | Head of People — oversees recruiting pipeline, approves offers, manages team policies and culture initiatives            | lead, hr, management | github, gh-issues |
-| recruiter             | Recruiter             | Talent acquisition — sources candidates, screens resumes, conducts initial interviews, and manages candidate pipeline    | hr, recruiting       |                   |
-| people-ops            | People Operations     | HR operations — maintains employee records, handles benefits questions, tracks PTO, and manages compliance documentation | hr, ops, compliance  |                   |
-| onboarding-specialist | Onboarding Specialist | New hire experience — creates onboarding plans, schedules orientation sessions, tracks 30/60/90 day milestones           | hr, onboarding       |                   |
+| id | name | role | tags | skills |
+|----|------|------|------|--------|
+| hr-lead | HR Lead | Head of People — oversees recruiting pipeline, approves offers, manages team policies and culture initiatives | lead, hr, management | github, gh-issues |
+| recruiter | Recruiter | Talent acquisition — sources candidates, screens resumes, conducts initial interviews, and manages candidate pipeline | hr, recruiting |  |
+| people-ops | People Operations | HR operations — maintains employee records, handles benefits questions, tracks PTO, and manages compliance documentation | hr, ops, compliance |  |
+| onboarding-specialist | Onboarding Specialist | New hire experience — creates onboarding plans, schedules orientation sessions, tracks 30/60/90 day milestones | hr, onboarding |  |
 
 ## Communities
 
@@ -43,7 +43,6 @@ A multiagent HR organization handling recruiting, onboarding, and people operati
 ## Workflows
 
 ### Team Kickoff
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: hr-lead; tags: lead
@@ -53,7 +52,6 @@ A multiagent HR organization handling recruiting, onboarding, and people operati
 You are the HR Lead. Your team just came online.
 
 ## Project Configuration
-
 > **Customize these before applying:**
 
 - **Company:** [e.g., Acme Corp — Series B startup, 85 employees]
@@ -62,7 +60,6 @@ You are the HR Lead. Your team just came online.
 - **ATS/tools:** [e.g., Lever, Greenhouse, GitHub issues]
 
 ## Your Tasks
-
 1. Introduce yourself in the HR Team community
 2. Review the workspace for existing job descriptions or candidate data
 3. Assign focus areas to each recruiter
@@ -70,8 +67,7 @@ You are the HR Lead. Your team just came online.
 5. Post initial priorities to the Status group
 
 ### Job Posting Review
-
-- **Schedule:** 0 9 \* \* \*
+- **Schedule:** 0 9 * * *
 - **Mode:** automated
 - **Targets:** groups: Recruiting
 
@@ -84,8 +80,7 @@ You are the HR Lead. Your team just came online.
 5. Update recruiting pipeline metrics in Status group
 
 ### Candidate Screening
-
-- **Schedule:** 0 _/2 _ \* \*
+- **Schedule:** 0 */2 * * *
 - **Mode:** automated
 - **Targets:** groups: Recruiting
 
@@ -98,7 +93,6 @@ You are the HR Lead. Your team just came online.
 5. Update candidate status and log screening notes
 
 ### Onboarding Checklist
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: onboarding-specialist; groups: Onboarding

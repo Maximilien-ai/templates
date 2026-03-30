@@ -16,12 +16,12 @@ A multiagent research group for academic projects. Includes literature review, d
 
 ## Agents
 
-| id            | name                | role                                                                                                                                | tags                            | skills            |
-| ------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ----------------- |
-| research-lead | Research Lead       | Principal investigator — defines research questions, manages methodology, coordinates team efforts, and ensures academic rigor      | lead, research, methodology     | github, gh-issues |
-| lit-reviewer  | Literature Reviewer | Literature specialist — searches databases, reads papers, extracts key findings, identifies gaps, and maintains citation database   | research, literature, citations |                   |
-| data-analyst  | Data Analyst        | Data analysis — cleans datasets, runs statistical analyses, creates visualizations, and validates findings against hypotheses       | research, data, statistics      | github, gh-issues |
-| writer        | Research Writer     | Academic writing — drafts paper sections, synthesizes findings into narrative, ensures proper citations, and formats for submission | research, writing, drafting     | github, gh-issues |
+| id | name | role | tags | skills |
+|----|------|------|------|--------|
+| research-lead | Research Lead | Principal investigator — defines research questions, manages methodology, coordinates team efforts, and ensures academic rigor | lead, research, methodology | github, gh-issues |
+| lit-reviewer | Literature Reviewer | Literature specialist — searches databases, reads papers, extracts key findings, identifies gaps, and maintains citation database | research, literature, citations |  |
+| data-analyst | Data Analyst | Data analysis — cleans datasets, runs statistical analyses, creates visualizations, and validates findings against hypotheses | research, data, statistics | github, gh-issues |
+| writer | Research Writer | Academic writing — drafts paper sections, synthesizes findings into narrative, ensures proper citations, and formats for submission | research, writing, drafting | github, gh-issues |
 
 ## Communities
 
@@ -37,7 +37,6 @@ A multiagent research group for academic projects. Includes literature review, d
 ## Workflows
 
 ### Research Kickoff
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: research-lead; tags: lead
@@ -47,7 +46,6 @@ A multiagent research group for academic projects. Includes literature review, d
 You are the Research Lead. Your team just came online.
 
 ## Project Configuration
-
 > **Customize these before applying:**
 
 - **Research topic:** [e.g., Impact of LLMs on software engineering productivity]
@@ -58,7 +56,6 @@ You are the Research Lead. Your team just came online.
 - **GitHub repo:** [e.g., owner/repo — for paper drafts and data]
 
 ## Your Tasks
-
 1. Introduce yourself in the Research Group community
 2. Define the research question, scope, and methodology
 3. Assign initial literature search topics to the lit reviewer
@@ -66,8 +63,7 @@ You are the Research Lead. Your team just came online.
 5. Set milestones: lit review, analysis, first draft, submission
 
 ### Literature Search
-
-- **Schedule:** 0 9 \* \* \*
+- **Schedule:** 0 9 * * *
 - **Mode:** automated
 - **Targets:** agents: lit-reviewer; groups: Literature
 
@@ -80,7 +76,6 @@ You are the Research Lead. Your team just came online.
 5. Post daily search summary to Literature group — flag any breakthrough papers
 
 ### Source Evaluation
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** groups: Literature, Analysis
@@ -94,7 +89,6 @@ You are the Research Lead. Your team just came online.
 5. Writer: begin outlining the literature review section based on themes
 
 ### Draft Review
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** groups: Writing

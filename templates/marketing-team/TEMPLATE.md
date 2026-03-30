@@ -22,12 +22,12 @@ A multiagent marketing organization managing content creation, SEO optimization,
 
 ## Agents
 
-| id             | name                 | role                                                                                                                        | tags                          | skills            |
-| -------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | ----------------- |
-| marketing-lead | Marketing Lead       | Head of marketing — sets campaign strategy, manages editorial calendar, approves content, and tracks ROI across channels    | lead, marketing, management   | github, gh-issues |
-| content-writer | Content Writer       | Content creation — writes blog posts, landing pages, email campaigns, and whitepapers based on editorial calendar           | marketing, content, writing   | github, gh-issues |
-| seo-analyst    | SEO Analyst          | Search optimization — conducts keyword research, audits on-page SEO, tracks rankings, and recommends content optimizations  | marketing, seo, analytics     | github, gh-issues |
-| social-mgr     | Social Media Manager | Social media — manages posting schedule, engages with audience, tracks social metrics, and adapts content for each platform | marketing, social, engagement |                   |
+| id | name | role | tags | skills |
+|----|------|------|------|--------|
+| marketing-lead | Marketing Lead | Head of marketing — sets campaign strategy, manages editorial calendar, approves content, and tracks ROI across channels | lead, marketing, management | github, gh-issues |
+| content-writer | Content Writer | Content creation — writes blog posts, landing pages, email campaigns, and whitepapers based on editorial calendar | marketing, content, writing | github, gh-issues |
+| seo-analyst | SEO Analyst | Search optimization — conducts keyword research, audits on-page SEO, tracks rankings, and recommends content optimizations | marketing, seo, analytics | github, gh-issues |
+| social-mgr | Social Media Manager | Social media — manages posting schedule, engages with audience, tracks social metrics, and adapts content for each platform | marketing, social, engagement |  |
 
 ## Communities
 
@@ -43,7 +43,6 @@ A multiagent marketing organization managing content creation, SEO optimization,
 ## Workflows
 
 ### Team Kickoff
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: marketing-lead; tags: lead
@@ -53,7 +52,6 @@ A multiagent marketing organization managing content creation, SEO optimization,
 You are the Marketing Lead. Your team just came online.
 
 ## Project Configuration
-
 > **Customize these before applying:**
 
 - **Product/brand:** [e.g., ClawMax.ai — multiagent orchestration platform]
@@ -63,7 +61,6 @@ You are the Marketing Lead. Your team just came online.
 - **GitHub repo:** [e.g., owner/repo — for content drafts]
 
 ## Your Tasks
-
 1. Introduce yourself in the Marketing Team community
 2. Review the workspace for existing content or brand guidelines
 3. Set content themes and campaign goals
@@ -71,8 +68,7 @@ You are the Marketing Lead. Your team just came online.
 5. Kick off content calendar planning in the Content group
 
 ### Content Calendar
-
-- **Schedule:** 0 9 \* \* 1
+- **Schedule:** 0 9 * * 1
 - **Mode:** managed
 - **Targets:** groups: Content
 
@@ -85,8 +81,7 @@ You are the Marketing Lead. Your team just came online.
 5. Post finalized calendar to Content group
 
 ### Campaign Review
-
-- **Schedule:** 0 10 \* \* \*
+- **Schedule:** 0 10 * * *
 - **Mode:** automated
 - **Targets:** groups: Status
 
@@ -99,8 +94,7 @@ You are the Marketing Lead. Your team just came online.
 5. Post daily performance snapshot to Status group
 
 ### Analytics Report
-
-- **Schedule:** 0 14 \* \* 5
+- **Schedule:** 0 14 * * 5
 - **Mode:** managed
 - **Targets:** groups: Status
 

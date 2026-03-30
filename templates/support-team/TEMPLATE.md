@@ -22,12 +22,12 @@ A multiagent customer support organization with ticket triage, SLA monitoring, e
 
 ## Agents
 
-| id             | name                   | role                                                                                                                       | tags                           | skills            |
-| -------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | ----------------- |
-| support-lead   | Support Lead           | Support manager — monitors SLA compliance, handles escalation decisions, coaches agents, and reports on CSAT metrics       | lead, support, management      | github, gh-issues |
-| support-agent  | Support Agent          | Frontline support — responds to tickets, troubleshoots issues, documents solutions, and maintains first-response SLA       | support, frontline             |                   |
-| escalation-eng | Escalation Engineer    | Senior technical support — handles complex escalations, debugs difficult issues, and creates permanent fixes               | support, escalation, technical | github, gh-issues |
-| knowledge-mgr  | Knowledge Base Manager | Documentation — maintains FAQ, writes help articles, identifies documentation gaps from ticket patterns, and trains agents | support, knowledge, docs       | github, gh-issues |
+| id | name | role | tags | skills |
+|----|------|------|------|--------|
+| support-lead | Support Lead | Support manager — monitors SLA compliance, handles escalation decisions, coaches agents, and reports on CSAT metrics | lead, support, management | github, gh-issues |
+| support-agent | Support Agent | Frontline support — responds to tickets, troubleshoots issues, documents solutions, and maintains first-response SLA | support, frontline |  |
+| escalation-eng | Escalation Engineer | Senior technical support — handles complex escalations, debugs difficult issues, and creates permanent fixes | support, escalation, technical | github, gh-issues |
+| knowledge-mgr | Knowledge Base Manager | Documentation — maintains FAQ, writes help articles, identifies documentation gaps from ticket patterns, and trains agents | support, knowledge, docs | github, gh-issues |
 
 ## Communities
 
@@ -43,7 +43,6 @@ A multiagent customer support organization with ticket triage, SLA monitoring, e
 ## Workflows
 
 ### Team Kickoff
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: support-lead; tags: lead
@@ -53,7 +52,6 @@ A multiagent customer support organization with ticket triage, SLA monitoring, e
 You are the Support Lead. Your team just came online.
 
 ## Project Configuration
-
 > **Customize these before applying:**
 
 - **Product/service:** [e.g., ClawMax multiagent platform]
@@ -63,7 +61,6 @@ You are the Support Lead. Your team just came online.
 - **Escalation criteria:** [e.g., P0 = outage, P1 = broken feature]
 
 ## Your Tasks
-
 1. Introduce yourself in the Support Team community
 2. Review the workspace for existing tickets or customer data
 3. Set SLA targets and escalation policies
@@ -71,8 +68,7 @@ You are the Support Lead. Your team just came online.
 5. Brief the knowledge manager on priority documentation areas
 
 ### Ticket Triage
-
-- **Schedule:** _/30 _ \* \* \*
+- **Schedule:** */30 * * * *
 - **Mode:** automated
 - **Targets:** groups: Triage
 
@@ -85,8 +81,7 @@ You are the Support Lead. Your team just came online.
 5. Update ticket status and post triage summary to Triage group
 
 ### SLA Monitoring
-
-- **Schedule:** 0 \* \* \* \*
+- **Schedule:** 0 * * * *
 - **Mode:** automated
 - **Targets:** groups: Status
 
@@ -99,8 +94,7 @@ You are the Support Lead. Your team just came online.
 5. Post hourly SLA dashboard to Status group
 
 ### Knowledge Base Updates
-
-- **Schedule:** 0 10 \* \* 5
+- **Schedule:** 0 10 * * 5
 - **Mode:** managed
 - **Targets:** agents: knowledge-mgr; groups: Knowledge Base
 

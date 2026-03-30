@@ -15,12 +15,12 @@ A small business multiagent team for running a specialty retail store. Manages p
 
 ## Agents
 
-| id               | name             | role                                                                                                             | tags                              | skills            |
-| ---------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------- | ----------------- |
-| owner            | Store Owner      | Business owner — sets strategy, approves purchases, manages P&L, and handles key customer relationships          | lead, management, retail          | github, gh-issues |
-| buyer            | Buyer            | Product sourcing — evaluates new products, negotiates with suppliers, manages purchase orders, and tracks trends | retail, buying, sourcing          | github, gh-issues |
-| merchandiser     | Merchandiser     | Visual merchandising — plans store layout, manages displays, tracks product performance, and optimizes placement | retail, merchandising, display    | github, gh-issues |
-| customer-service | Customer Service | Customer care — handles inquiries, processes returns, manages loyalty program, and collects feedback             | retail, customer-service, support | github, gh-issues |
+| id | name | role | tags | skills |
+|----|------|------|------|--------|
+| owner | Store Owner | Business owner — sets strategy, approves purchases, manages P&L, and handles key customer relationships | lead, management, retail | github, gh-issues |
+| buyer | Buyer | Product sourcing — evaluates new products, negotiates with suppliers, manages purchase orders, and tracks trends | retail, buying, sourcing | github, gh-issues |
+| merchandiser | Merchandiser | Visual merchandising — plans store layout, manages displays, tracks product performance, and optimizes placement | retail, merchandising, display | github, gh-issues |
+| customer-service | Customer Service | Customer care — handles inquiries, processes returns, manages loyalty program, and collects feedback | retail, customer-service, support | github, gh-issues |
 
 ## Communities
 
@@ -36,7 +36,6 @@ A small business multiagent team for running a specialty retail store. Manages p
 ## Workflows
 
 ### Team Kickoff
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: owner; tags: lead
@@ -46,7 +45,6 @@ A small business multiagent team for running a specialty retail store. Manages p
 You are the Store Owner. Your team just came online.
 
 ## Project Configuration
-
 > **Customize these before applying:**
 
 - **Store type:** [e.g., boutique clothing, artisan coffee, craft supplies]
@@ -56,7 +54,6 @@ You are the Store Owner. Your team just came online.
 - **GitHub repo:** [e.g., owner/repo — for catalog and inventory tracking]
 
 ## Your Tasks
-
 1. Introduce yourself in the Store Team community
 2. Review the workspace for existing product data or supplier contacts
 3. Brief the buyer on sourcing priorities and budget
@@ -64,8 +61,7 @@ You are the Store Owner. Your team just came online.
 5. Establish customer service standards and response times
 
 ### Product Curation
-
-- **Schedule:** 0 9 \* \* 1
+- **Schedule:** 0 9 * * 1
 - **Mode:** managed
 - **Targets:** groups: Buying
 
@@ -78,8 +74,7 @@ You are the Store Owner. Your team just came online.
 5. Post catalog changes summary to Status group
 
 ### Pricing Review
-
-- **Schedule:** 0 8 \* \* \*
+- **Schedule:** 0 8 * * *
 - **Mode:** automated
 - **Targets:** groups: Merchandising
 
@@ -92,8 +87,7 @@ You are the Store Owner. Your team just came online.
 5. Post pricing summary to Status group
 
 ### Customer Follow-up
-
-- **Schedule:** 0 _/4 _ \* \*
+- **Schedule:** 0 */4 * * *
 - **Mode:** automated
 - **Targets:** agents: customer-service; groups: Customer Care
 

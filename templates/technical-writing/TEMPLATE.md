@@ -10,9 +10,6 @@ tags:
   - documentation
   - editing
   - publishing
-testedWith:
-  - platform: ClawMax
-    version: v1.1.21
 parameters:
   - agentId: writer
     label: Number of Writers
@@ -25,12 +22,12 @@ A multiagent technical writing team for creating documentation, tutorials, and r
 
 ## Agents
 
-| id        | name               | role                                                                                                                                            | tags                     | skills            |
-| --------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
-| editor    | Editor             | Editorial lead — manages content pipeline, assigns topics, reviews all content for quality and consistency, and maintains style guide           | lead, writing, editorial | github, gh-issues |
-| writer    | Technical Writer   | Content creation — researches topics, writes documentation and tutorials, incorporates review feedback, and maintains technical accuracy        | writing, documentation   | github, gh-issues |
-| reviewer  | Technical Reviewer | Quality assurance — fact-checks technical content, tests code examples, verifies accuracy against source material, and suggests improvements    | writing, review, qa      | github, gh-issues |
-| publisher | Publisher          | Publishing operations — formats content for target platforms, manages publishing schedule, handles SEO metadata, and tracks content performance | writing, publishing, ops | github, gh-issues |
+| id | name | role | tags | skills |
+|----|------|------|------|--------|
+| editor | Editor | Editorial lead — manages content pipeline, assigns topics, reviews all content for quality and consistency, and maintains style guide | lead, writing, editorial | github, gh-issues |
+| writer | Technical Writer | Content creation — researches topics, writes documentation and tutorials, incorporates review feedback, and maintains technical accuracy | writing, documentation | github, gh-issues |
+| reviewer | Technical Reviewer | Quality assurance — fact-checks technical content, tests code examples, verifies accuracy against source material, and suggests improvements | writing, review, qa | github, gh-issues |
+| publisher | Publisher | Publishing operations — formats content for target platforms, manages publishing schedule, handles SEO metadata, and tracks content performance | writing, publishing, ops | github, gh-issues |
 
 ## Communities
 
@@ -46,7 +43,6 @@ A multiagent technical writing team for creating documentation, tutorials, and r
 ## Workflows
 
 ### Team Kickoff
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: editor; tags: lead
@@ -56,7 +52,6 @@ A multiagent technical writing team for creating documentation, tutorials, and r
 You are the Editor. Your team just came online.
 
 ## Project Configuration
-
 > **Customize these before applying:**
 
 - **Topics to cover:** [e.g., API docs, getting started guide, architecture overview]
@@ -66,7 +61,6 @@ You are the Editor. Your team just came online.
 - **Output format:** [e.g., Markdown, MDX, reStructuredText]
 
 ## Your Tasks
-
 1. Introduce yourself in the Writing Team community
 2. Review the workspace for existing documentation or content plans
 3. Create a content plan based on the topics above and assign to writers
@@ -75,7 +69,6 @@ You are the Editor. Your team just came online.
 6. If a GitHub repo is configured, create issues for each writing assignment
 
 ### Outline Review
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: editor; groups: Drafts
@@ -89,8 +82,7 @@ You are the Editor. Your team just came online.
 5. Approve outline and set deadline for first draft
 
 ### Draft Writing
-
-- **Schedule:** 0 10 \* \* \*
+- **Schedule:** 0 10 * * *
 - **Mode:** automated
 - **Targets:** groups: Drafts
 
@@ -103,7 +95,6 @@ You are the Editor. Your team just came online.
 5. Post content pipeline status to Status group
 
 ### Fact Check
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: reviewer; groups: Review
@@ -117,7 +108,6 @@ You are the Editor. Your team just came online.
 5. Submit review with corrections, suggestions, and approval status
 
 ### Publish
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: publisher; groups: Publishing

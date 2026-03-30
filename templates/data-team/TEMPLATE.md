@@ -22,12 +22,12 @@ A multiagent data team with pipeline engineering, analytics, and ML roles. Autom
 
 ## Agents
 
-| id            | name          | role                                                                                                                              | tags                        | skills            |
-| ------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ----------------- |
-| data-lead     | Data Lead     | Head of data — sets data strategy, manages pipeline priorities, coordinates analytics and ML efforts, and reports to stakeholders | lead, data, management      | github, gh-issues |
-| data-engineer | Data Engineer | Pipeline builder — designs ETL/ELT pipelines, manages data warehouse, ensures data freshness, and handles schema migrations       | data, pipeline, engineering | github, gh-issues |
-| analyst       | Data Analyst  | Analytics — builds dashboards, runs ad-hoc queries, produces reports, and translates data into business insights                  | data, analytics, reporting  | github, gh-issues |
-| ml-engineer   | ML Engineer   | Machine learning — trains models, manages experiments, deploys inference pipelines, and monitors model performance                | data, ml, engineering       | github, gh-issues |
+| id | name | role | tags | skills |
+|----|------|------|------|--------|
+| data-lead | Data Lead | Head of data — sets data strategy, manages pipeline priorities, coordinates analytics and ML efforts, and reports to stakeholders | lead, data, management | github, gh-issues |
+| data-engineer | Data Engineer | Pipeline builder — designs ETL/ELT pipelines, manages data warehouse, ensures data freshness, and handles schema migrations | data, pipeline, engineering | github, gh-issues |
+| analyst | Data Analyst | Analytics — builds dashboards, runs ad-hoc queries, produces reports, and translates data into business insights | data, analytics, reporting | github, gh-issues |
+| ml-engineer | ML Engineer | Machine learning — trains models, manages experiments, deploys inference pipelines, and monitors model performance | data, ml, engineering | github, gh-issues |
 
 ## Communities
 
@@ -43,7 +43,6 @@ A multiagent data team with pipeline engineering, analytics, and ML roles. Autom
 ## Workflows
 
 ### Team Kickoff
-
 - **Schedule:** manual
 - **Mode:** managed
 - **Targets:** agents: data-lead; tags: lead
@@ -53,7 +52,6 @@ A multiagent data team with pipeline engineering, analytics, and ML roles. Autom
 You are the Data Lead. Your team just came online.
 
 ## Project Configuration
-
 > **Customize these before applying:**
 
 - **Data sources:** [e.g., PostgreSQL, S3, Kafka, APIs]
@@ -64,7 +62,6 @@ You are the Data Lead. Your team just came online.
 - **GitHub repo:** [e.g., owner/repo — for pipeline code and models]
 
 ## Your Tasks
-
 1. Introduce yourself in the Data Team community
 2. Review the workspace for existing pipeline code, schemas, or dashboards
 3. Assign pipeline ownership areas to data engineers
@@ -72,8 +69,7 @@ You are the Data Lead. Your team just came online.
 5. Discuss ML roadmap with the ML engineer and set first experiment
 
 ### Pipeline Monitoring
-
-- **Schedule:** 0 \* \* \* \*
+- **Schedule:** 0 * * * *
 - **Mode:** automated
 - **Targets:** groups: Pipeline
 
@@ -86,8 +82,7 @@ You are the Data Lead. Your team just came online.
 5. Post pipeline health summary to Status group
 
 ### Data Quality Check
-
-- **Schedule:** 0 8 \* \* \*
+- **Schedule:** 0 8 * * *
 - **Mode:** automated
 - **Targets:** groups: Pipeline, Analytics
 
@@ -100,8 +95,7 @@ You are the Data Lead. Your team just came online.
 5. Post quality scorecard to Status group — flag any violations
 
 ### Model Evaluation
-
-- **Schedule:** 0 14 \* \* 5
+- **Schedule:** 0 14 * * 5
 - **Mode:** managed
 - **Targets:** agents: ml-engineer; groups: ML
 
