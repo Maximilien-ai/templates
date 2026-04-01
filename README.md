@@ -98,6 +98,8 @@ See [spec/template-spec.md](spec/template-spec.md) for the full specification.
 | Personal  | Meeting Prep Desk | 4 | 4 |
 | Personal  | Meeting Capture & Follow-up | 4 | 4 |
 | Personal  | Personal Research Desk | 4 | 4 |
+| Personal  | Tax Planning Desk | 4 | 4 |
+| Personal  | Investing Research Desk | 4 | 4 |
 | Science   | Biological Research Lab | 4 | 4 |
 | Science   | Mathematics Proof Studio | 4 | 4 |
 | Science   | Materials Discovery Lab | 4 | 4 |
