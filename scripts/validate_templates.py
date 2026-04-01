@@ -19,7 +19,7 @@ COMMUNITY_BULLET_RE = re.compile(r"^- \*\*(.+?)\*\* \u2014 (.+)$")
 GROUP_BULLET_RE = re.compile(r"^- \*\*(.+?)\*\* \u2014 (.+?)(?: \((.+)\))?$")
 METADATA_RE = re.compile(r"^- \*\*(.+?):\*\* (.+)$")
 VALID_TEMPLATE_TYPES = {"organization", "agent"}
-VALID_CATEGORIES = {"business", "technical", "personal"}
+VALID_CATEGORIES = {"business", "technical", "personal", "science"}
 VALID_EXECUTION_MODES = {"automated", "managed"}
 VALID_WORKFLOW_TYPES = {"once", "recurring", "conditional"}
 
@@ -263,7 +263,7 @@ def parse_workflows_section(lines: list[str]) -> list[dict[str, Any]]:
             if not metadata_match:
                 break
             meta_key, meta_value = metadata_match.groups()
-            key = meta_key.strip().lower()
+            key = meta_key.strip().lower().replace(" ", "")
             if key == "schedule":
                 metadata["schedule"] = meta_value.strip()
             elif key == "mode":
@@ -379,7 +379,7 @@ def validate_core_template(data: dict[str, Any], path: Path, errors: list[str]) 
 
     category = data.get("category")
     if category is not None and category not in VALID_CATEGORIES:
-        fail(errors, path, "category must be one of business, technical, personal")
+        fail(errors, path, "category must be one of business, technical, personal, science")
 
     if "description" in data:
         expect_nonempty_string(errors, path, data.get("description"), "description")
@@ -590,6 +590,7 @@ def validate_markdown_template(markdown: MarkdownTemplate, path: Path, errors: l
             "groups": markdown.groups,
             "workflows": [
                 {
+                    "id": re.sub(r"[^a-z0-9]+", "-", workflow["name"].lower()).strip("-"),
                     "name": workflow["name"],
                     "schedule": workflow["schedule"],
                     "executionMode": workflow["executionMode"],

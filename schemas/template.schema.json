@@ -38,7 +38,8 @@
       "enum": [
         "business",
         "technical",
-        "personal"
+        "personal",
+        "science"
       ]
     },
     "author": {
