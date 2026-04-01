@@ -93,6 +93,11 @@ See [spec/template-spec.md](spec/template-spec.md) for the full specification.
 | Technical | Engineering Team   | 4      | 5         |
 | Personal  | Student Research   | 4      | 4         |
 | Personal  | Technical Writing  | 4      | 5         |
+| Personal  | Chief Of Staff | 4 | 4 |
+| Personal  | Email & Calendar Manager | 4 | 4 |
+| Personal  | Meeting Prep Desk | 4 | 4 |
+| Personal  | Meeting Capture & Follow-up | 4 | 4 |
+| Personal  | Personal Research Desk | 4 | 4 |
 | Science   | Biological Research Lab | 4 | 4 |
 | Science   | Mathematics Proof Studio | 4 | 4 |
 | Science   | Materials Discovery Lab | 4 | 4 |
@@ -101,7 +106,7 @@ See [spec/template-spec.md](spec/template-spec.md) for the full specification.
 | Science   | Computer Science Lab | 4 | 4 |
 | Science   | AI Research Lab | 4 | 4 |
 
-These science templates are intentionally marked as proposal/early-idea starters and are designed to be adapted rather than treated as fully validated workflows.
+These personal assistant and science templates are intentionally marked as proposal/early-idea starters and are designed to be adapted rather than treated as fully validated workflows.
 
 All templates include:
 
