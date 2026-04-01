@@ -108,7 +108,7 @@ See [spec/template-spec.md](spec/template-spec.md) for the full specification.
 | Science   | Computer Science Lab | 4 | 4 |
 | Science   | AI Research Lab | 4 | 4 |
 
-These personal assistant and science templates are intentionally marked as proposal/early-idea starters and are designed to be adapted rather than treated as fully validated workflows.
+These personal assistant, science, travel, hobbies, and family templates are intentionally marked as proposal/early-idea starters and are designed to be adapted rather than treated as fully validated workflows.
 
 All templates include:
 

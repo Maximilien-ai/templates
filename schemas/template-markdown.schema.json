@@ -40,7 +40,10 @@
           "enum": [
             "business",
             "technical",
-            "personal"
+            "personal",
+            "travel",
+            "hobbies",
+            "family"
           ]
         },
         "author": {

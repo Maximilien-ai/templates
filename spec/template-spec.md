@@ -72,7 +72,7 @@ This allows reusable workflow definitions across multiple org templates.
 | Field        | Type     | Default   | Description                                                   |
 | ------------ | -------- | --------- | ------------------------------------------------------------- |
 | `version`    | string   | `"1.0.0"` | Semantic version (X.Y.Z)                                      |
-| `category`   | string   | —         | `"business"`, `"technical"`, `"personal"`, or `"science"`                  |
+| `category`   | string   | —         | `"business"`, `"technical"`, `"personal"`, `"science"`, `"travel"`, `"hobbies"`, or `"family"` |
 | `author`     | string   | —         | Template author                                               |
 | `tags`       | string[] | `[]`      | Searchable tags                                               |
 | `testedWith` | object[] | `[]`      | Tested platform/version pairs with `platform` and `version`   |

@@ -19,7 +19,7 @@ COMMUNITY_BULLET_RE = re.compile(r"^- \*\*(.+?)\*\* \u2014 (.+)$")
 GROUP_BULLET_RE = re.compile(r"^- \*\*(.+?)\*\* \u2014 (.+?)(?: \((.+)\))?$")
 METADATA_RE = re.compile(r"^- \*\*(.+?):\*\* (.+)$")
 VALID_TEMPLATE_TYPES = {"organization", "agent"}
-VALID_CATEGORIES = {"business", "technical", "personal", "science"}
+VALID_CATEGORIES = {"business", "technical", "personal", "science", "travel", "hobbies", "family"}
 VALID_EXECUTION_MODES = {"automated", "managed"}
 VALID_WORKFLOW_TYPES = {"once", "recurring", "conditional"}
 
@@ -379,7 +379,7 @@ def validate_core_template(data: dict[str, Any], path: Path, errors: list[str]) 
 
     category = data.get("category")
     if category is not None and category not in VALID_CATEGORIES:
-        fail(errors, path, "category must be one of business, technical, personal, science")
+        fail(errors, path, "category must be one of business, technical, personal, science, travel, hobbies, family")
 
     if "description" in data:
         expect_nonempty_string(errors, path, data.get("description"), "description")
