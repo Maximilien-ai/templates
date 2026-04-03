@@ -1,6 +1,6 @@
 {
   "name": "Conference Ops Hub",
-  "emoji": "\ud83c\udfdf\ufe0f",
+  "emoji": "🏟️",
   "type": "organization",
   "version": "1.0.0",
   "category": "personal",
@@ -65,7 +65,7 @@
     {
       "id": "conference-director",
       "name": "Conference Director",
-      "role": "Conference lead \u2014 sets the event strategy, decision cadence, and overall operating plan.",
+      "role": "Conference lead — sets the event strategy, decision cadence, and overall operating plan.",
       "tags": [
         "lead",
         "conference",
@@ -82,7 +82,7 @@
     {
       "id": "track-coordinator",
       "name": "Track Coordinator",
-      "role": "Track specialist \u2014 owns agenda blocks, session sequencing, and the detail flow for one part of the event.",
+      "role": "Track specialist — owns agenda blocks, session sequencing, and the detail flow for one part of the event.",
       "tags": [
         "conference",
         "program",
@@ -99,7 +99,7 @@
     {
       "id": "speaker-operations-lead",
       "name": "Speaker Operations Lead",
-      "role": "Speaker ops specialist \u2014 manages confirmations, prep packets, travel, timing, and on-site readiness.",
+      "role": "Speaker ops specialist — manages confirmations, prep packets, travel, timing, and on-site readiness.",
       "tags": [
         "conference",
         "speakers",
@@ -116,7 +116,7 @@
     {
       "id": "capacity-planner",
       "name": "Capacity Planner",
-      "role": "Capacity specialist \u2014 models attendance, room fit, staffing, registration flow, and contingency scenarios.",
+      "role": "Capacity specialist — models attendance, room fit, staffing, registration flow, and contingency scenarios.",
       "tags": [
         "conference",
         "capacity",
@@ -133,7 +133,7 @@
     {
       "id": "sponsor-manager",
       "name": "Sponsor Manager",
-      "role": "Sponsor specialist \u2014 manages partner deliverables, timelines, and event-day sponsor coordination.",
+      "role": "Sponsor specialist — manages partner deliverables, timelines, and event-day sponsor coordination.",
       "tags": [
         "conference",
         "sponsors"
@@ -148,7 +148,7 @@
     {
       "id": "event-follow-up-lead",
       "name": "Event Follow Up Lead",
-      "role": "Follow-up specialist \u2014 turns the event into recap, pipeline, survey review, and next-event planning.",
+      "role": "Follow-up specialist — turns the event into recap, pipeline, survey review, and next-event planning.",
       "tags": [
         "conference",
         "follow-up"
@@ -202,7 +202,10 @@
       },
       "content": "# Track Planning Review\n\n1. Build or review the track map, session timing, and room flow\n2. Identify gaps, overlaps, and risky transitions\n3. Flag any missing owners, assets, or moderation needs\n4. Post the track planning review to Program and the biggest risks to Status",
       "enabled": true,
-      "executionMode": "managed"
+      "executionMode": "managed",
+      "dependsOn": [
+        "conference-kickoff"
+      ]
     },
     {
       "id": "speaker-ops-review",
@@ -223,7 +226,10 @@
       },
       "content": "# Speaker Ops Review\n\n1. Review each speaker's confirmation, talk readiness, and asset status\n2. Track travel, green-room, timing, and moderator dependencies\n3. Escalate missing materials, scheduling risk, or owner gaps\n4. Post the speaker ops review to Speakers and the top blockers to Status",
       "enabled": true,
-      "executionMode": "managed"
+      "executionMode": "managed",
+      "dependsOn": [
+        "track-planning-review"
+      ]
     },
     {
       "id": "capacity-and-venue-plan",
@@ -244,7 +250,10 @@
       },
       "content": "# Capacity And Venue Plan\n\n1. Review attendance assumptions, room fit, staffing, registration, and line management\n2. Identify where capacity or flow could break down at peak volume\n3. Recommend contingency plans for overflow, delays, and staffing gaps\n4. Post the capacity plan to Capacity and the executive summary to Status",
       "enabled": true,
-      "executionMode": "managed"
+      "executionMode": "managed",
+      "dependsOn": [
+        "speaker-ops-review"
+      ]
     },
     {
       "id": "sponsor-readiness-check",
@@ -265,7 +274,10 @@
       },
       "content": "# Sponsor Readiness Check\n\n1. Review sponsor commitments, deadlines, placements, and deliverables\n2. Identify missing assets, approvals, or event-day needs\n3. Clarify what the core event team still owes sponsors or partners\n4. Post the sponsor readiness check to Sponsors and any escalations to Status",
       "enabled": true,
-      "executionMode": "managed"
+      "executionMode": "managed",
+      "dependsOn": [
+        "capacity-and-venue-plan"
+      ]
     },
     {
       "id": "conference-follow-up",
@@ -286,7 +298,10 @@
       },
       "content": "# Conference Follow Up\n\n1. Summarize the event outcomes, feedback themes, and unresolved issues\n2. Draft sponsor, speaker, and attendee follow-up streams\n3. Capture leads, commitments, and the next conference improvements\n4. Post the follow-up plan to Follow-Up and the final summary to Status",
       "enabled": true,
-      "executionMode": "managed"
+      "executionMode": "managed",
+      "dependsOn": [
+        "sponsor-readiness-check"
+      ]
     }
   ]
 }

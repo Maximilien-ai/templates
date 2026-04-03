@@ -1,6 +1,6 @@
 {
   "name": "Small Event Planning Desk",
-  "emoji": "\ud83c\udf89",
+  "emoji": "🎉",
   "type": "organization",
   "version": "1.0.0",
   "category": "personal",
@@ -49,7 +49,7 @@
     {
       "id": "event-lead",
       "name": "Event Lead",
-      "role": "Event planning lead \u2014 sets the event goals, guest experience, and final plan for the host.",
+      "role": "Event planning lead — sets the event goals, guest experience, and final plan for the host.",
       "tags": [
         "lead",
         "event",
@@ -66,7 +66,7 @@
     {
       "id": "guest-coordinator",
       "name": "Guest Coordinator",
-      "role": "Guest specialist \u2014 manages invites, responses, seating ideas, and guest-specific follow-up.",
+      "role": "Guest specialist — manages invites, responses, seating ideas, and guest-specific follow-up.",
       "tags": [
         "event",
         "guests",
@@ -82,7 +82,7 @@
     {
       "id": "logistics-coordinator",
       "name": "Logistics Coordinator",
-      "role": "Logistics specialist \u2014 tracks food, supplies, setup, and the event-day checklist.",
+      "role": "Logistics specialist — tracks food, supplies, setup, and the event-day checklist.",
       "tags": [
         "event",
         "logistics"
@@ -137,7 +137,10 @@
       },
       "content": "# Guest List Check\n\n1. Draft or review the invite list and RSVP status\n2. Note any dietary, accessibility, timing, or seating needs\n3. Identify which guests still need follow-up\n4. Post the guest update to Guests and any risks to Status",
       "enabled": true,
-      "executionMode": "managed"
+      "executionMode": "managed",
+      "dependsOn": [
+        "small-event-kickoff"
+      ]
     },
     {
       "id": "event-day-readiness",
@@ -158,7 +161,10 @@
       },
       "content": "# Event Day Readiness\n\n1. Review the venue, supplies, food, timing, and cleanup needs\n2. Build a short event-day checklist with sequence and owners\n3. Flag any missing items, reservations, or timing risks\n4. Post the readiness checklist to Logistics and a short summary to Status",
       "enabled": true,
-      "executionMode": "managed"
+      "executionMode": "managed",
+      "dependsOn": [
+        "guest-list-check"
+      ]
     }
   ]
 }
