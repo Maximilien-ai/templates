@@ -43,20 +43,20 @@ fi
 if [[ ! -x "$LOCAL_BIN_DIR/actionlint" ]] && ! command -v actionlint >/dev/null 2>&1; then
   echo "Installing actionlint..."
   if command -v go >/dev/null 2>&1; then
-    if ! GOBIN="$LOCAL_BIN_DIR" go install github.com/rhysd/actionlint/cmd/actionlint@latest; then
-      if [[ "$CI_MODE" != "--ci" ]] && command -v brew >/dev/null 2>&1; then
-        echo "Falling back to Homebrew for actionlint..."
-        brew install actionlint
-      else
-        echo "Unable to auto-install actionlint. The current actionlint release requires Go 1.24+." >&2
-        echo "Upgrade Go to 1.24+, install actionlint manually, or rerun ./setup.sh on a machine with Homebrew." >&2
-        exit 1
+      if ! GOBIN="$LOCAL_BIN_DIR" go install github.com/rhysd/actionlint/cmd/actionlint@latest; then
+        if [[ "$CI_MODE" != "--ci" ]] && command -v brew >/dev/null 2>&1; then
+          echo "Falling back to Homebrew for actionlint..."
+          brew install actionlint
+        else
+          echo "Unable to auto-install actionlint. The current actionlint release requires Go 1.25+." >&2
+          echo "Upgrade Go to 1.25+, install actionlint manually, or rerun ./setup.sh on a machine with Homebrew." >&2
+          exit 1
+        fi
       fi
-    fi
   elif [[ "$CI_MODE" != "--ci" ]] && command -v brew >/dev/null 2>&1; then
     brew install actionlint
   else
-    echo "Unable to auto-install actionlint. Install Go 1.24+ or Homebrew and rerun ./setup.sh." >&2
+    echo "Unable to auto-install actionlint. Install Go 1.25+ or Homebrew and rerun ./setup.sh." >&2
     exit 1
   fi
 fi
