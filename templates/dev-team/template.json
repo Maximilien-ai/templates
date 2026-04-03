@@ -25,7 +25,7 @@
     {
       "id": "tech-lead",
       "name": "Tech Lead",
-      "role": "Technical leadership \u2014 sets architecture direction, reviews complex PRs, unblocks engineers, and manages technical debt priorities",
+      "role": "Technical leadership — sets architecture direction, reviews complex PRs, unblocks engineers, and manages technical debt priorities",
       "tags": [
         "lead",
         "engineering",
@@ -47,7 +47,7 @@
     {
       "id": "engineer",
       "name": "Software Engineer",
-      "role": "Feature development \u2014 writes code, submits PRs, fixes bugs, writes tests, and participates in code review",
+      "role": "Feature development — writes code, submits PRs, fixes bugs, writes tests, and participates in code review",
       "tags": [
         "engineering",
         "development"
@@ -66,7 +66,7 @@
     {
       "id": "qa-engineer",
       "name": "QA Engineer",
-      "role": "Quality assurance \u2014 writes and runs test suites, performs regression testing, validates bug fixes, and tracks test coverage",
+      "role": "Quality assurance — writes and runs test suites, performs regression testing, validates bug fixes, and tracks test coverage",
       "tags": [
         "engineering",
         "qa",
@@ -87,7 +87,7 @@
     {
       "id": "devops",
       "name": "DevOps Engineer",
-      "role": "Infrastructure & CI/CD \u2014 maintains build pipelines, monitors deployments, manages environments, and triages CI failures",
+      "role": "Infrastructure & CI/CD — maintains build pipelines, monitors deployments, manages environments, and triages CI failures",
       "tags": [
         "engineering",
         "devops",
@@ -109,29 +109,54 @@
   "communities": [
     {
       "name": "Dev Team",
-      "description": "All engineering team coordination and announcements"
+      "description": "All engineering team coordination and announcements",
+      "tags": [
+        "technical",
+        "engineering",
+        "dev-team"
+      ]
     }
   ],
   "groups": [
     {
       "name": "Engineering",
       "description": "Feature development, code review, and technical discussions",
-      "community": "Dev Team"
+      "community": "Dev Team",
+      "tags": [
+        "technical",
+        "dev-team",
+        "engineering"
+      ]
     },
     {
       "name": "QA",
       "description": "Test plans, bug reports, and regression tracking",
-      "community": "Dev Team"
+      "community": "Dev Team",
+      "tags": [
+        "technical",
+        "dev-team",
+        "qa"
+      ]
     },
     {
       "name": "DevOps",
       "description": "CI/CD pipeline, deployments, and infrastructure",
-      "community": "Dev Team"
+      "community": "Dev Team",
+      "tags": [
+        "technical",
+        "dev-team",
+        "devops"
+      ]
     },
     {
       "name": "Status",
       "description": "Daily standups and sprint progress",
-      "community": "Dev Team"
+      "community": "Dev Team",
+      "tags": [
+        "technical",
+        "dev-team",
+        "status"
+      ]
     }
   ],
   "workflows": [
@@ -155,8 +180,15 @@
           "devops"
         ]
       },
-      "content": "# Dev Team Kickoff\n\nYou are the Tech Lead. Your team just came online.\n\n## Project Configuration\n> **Customize these before applying:**\n\n- **Repository:** [e.g., owner/repo \u2014 the codebase to work on]\n- **Focus areas:** [e.g., bug fixes, new features, refactoring, test coverage]\n- **Tech stack:** [e.g., TypeScript/React, Python/FastAPI, Go]\n- **Priority issues:** [e.g., #42, #56 \u2014 specific issues to start with]\n- **Branch strategy:** [feature branches off main, GitFlow, trunk-based, custom]\n- **GitHub repo:** [e.g., owner/repo \u2014 for coordination and tracking]\n\n## Your Tasks\n1. Introduce yourself in the Dev Team community\n2. Clone the repo and review the codebase architecture\n3. Assign initial focus areas to each engineer\n4. Set up coding standards and review expectations\n5. Kick off the first PR review cycle and daily standup",
-      "type": "once"
+      "content": "# Dev Team Kickoff\n\nYou are the Tech Lead. Your team just came online.\n\n## Project Configuration\n> **Customize these before applying:**\n\n- **Repository:** [e.g., owner/repo — the codebase to work on]\n- **Focus areas:** [e.g., bug fixes, new features, refactoring, test coverage]\n- **Tech stack:** [e.g., TypeScript/React, Python/FastAPI, Go]\n- **Priority issues:** [e.g., #42, #56 — specific issues to start with]\n- **Branch strategy:** [feature branches off main, GitFlow, trunk-based, custom]\n- **GitHub repo:** [e.g., owner/repo — for coordination and tracking]\n\n## Your Tasks\n1. Introduce yourself in the Dev Team community\n2. Clone the repo and review the codebase architecture\n3. Assign initial focus areas to each engineer\n4. Set up coding standards and review expectations\n5. Kick off the first PR review cycle and daily standup",
+      "type": "once",
+      "owner": "tech-lead",
+      "tags": [
+        "workflow",
+        "technical",
+        "dev-team",
+        "team-kickoff"
+      ]
     },
     {
       "id": "pr-review",
@@ -177,7 +209,13 @@
       "dependsOn": [
         "team-kickoff"
       ],
-      "type": "recurring"
+      "type": "recurring",
+      "tags": [
+        "workflow",
+        "technical",
+        "dev-team",
+        "pr-review"
+      ]
     },
     {
       "id": "ci-triage",
@@ -200,7 +238,13 @@
       "dependsOn": [
         "team-kickoff"
       ],
-      "type": "recurring"
+      "type": "recurring",
+      "tags": [
+        "workflow",
+        "technical",
+        "dev-team",
+        "ci-triage"
+      ]
     },
     {
       "id": "release-prep",
@@ -223,12 +267,19 @@
         "pr-review",
         "ci-triage"
       ],
-      "type": "conditional"
+      "type": "conditional",
+      "owner": "tech-lead",
+      "tags": [
+        "workflow",
+        "technical",
+        "dev-team",
+        "release-prep"
+      ]
     },
     {
       "id": "daily-standup",
       "name": "Daily Standup",
-      "description": "Async daily standup \u2014 what was done, what's planned, blockers",
+      "description": "Async daily standup — what was done, what's planned, blockers",
       "schedule": "30 9 * * *",
       "enabled": true,
       "executionMode": "automated",
@@ -244,7 +295,13 @@
       "dependsOn": [
         "team-kickoff"
       ],
-      "type": "recurring"
+      "type": "recurring",
+      "tags": [
+        "workflow",
+        "technical",
+        "dev-team",
+        "daily-standup"
+      ]
     }
   ],
   "category": "technical"
