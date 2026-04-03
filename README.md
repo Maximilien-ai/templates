@@ -76,6 +76,16 @@ A multiagent software development team.
 
 See [spec/template-spec.md](spec/template-spec.md) for the full specification.
 
+## Secure Runtime Inputs
+
+Some templates may declare `secretRequirements` in `template.json` for runtime values such as API keys, event URLs, slugs, export paths, or other user-provided inputs.
+
+- ClawMax surfaces these requirements in a browser-local `Secrets` step during template apply
+- sensitive values can stay in the browser instead of being written into workflow markdown
+- non-sensitive values can optionally prefill kickoff workflow fields when the template declares that mapping
+
+The Lu.ma template is the reference example for this pattern.
+
 ## Templates
 
 | Category  | Template           | Agents | Workflows |
@@ -116,6 +126,7 @@ All templates include:
 - DAG dependencies between workflows
 - GitHub coordination skills (where applicable)
 - Category tags for filtering
+- Optional `secretRequirements` metadata for secure runtime inputs when a template needs API keys or similar values
 
 ## Contributing
 

@@ -77,6 +77,7 @@ This allows reusable workflow definitions across multiple org templates.
 | `tags`       | string[] | `[]`      | Searchable tags                                               |
 | `testedWith` | object[] | `[]`      | Tested platform/version pairs with `platform` and `version`   |
 | `parameters` | object[] | —         | Scalable agent parameters (agentId, label, default, min, max) |
+| `secretRequirements` | object[] | — | Optional browser-local runtime-secret or input prompts for template apply |
 
 ### Markdown Body (structured sections)
 
@@ -158,6 +159,23 @@ You are the Tech Lead. Your team just came online.
 - `Targets`: `agents: a, b; groups: g1; tags: t1`
 
 **Content**: Everything after the metadata lines until the next `###` workflow.
+
+#### Secret Requirements
+
+Templates may declare optional `secretRequirements` in `template.json` when they need runtime inputs such as API keys, URLs, slugs, export paths, or similar user-provided values.
+
+Typical fields:
+
+- `key` — stable machine-readable identifier such as `LUMA_API_KEY`
+- `label` — user-facing prompt label
+- `kind` — suggested input type such as `api_key`, `token`, `url`, or `text`
+- `required` — whether apply should block on a missing value
+- `sensitive` — whether the value should stay hidden and avoid markdown persistence
+- `help` — short guidance for where the user gets the value
+- `placeholder` — optional input hint
+- `workflowFieldLabel` — optional mapping for non-sensitive values that should prefill a kickoff workflow field
+
+In ClawMax, these requirements surface as a browser-local `Secrets` step during template apply so users can provide secure runtime inputs without writing secrets directly into workflow markdown.
 
 ## Validation
 
