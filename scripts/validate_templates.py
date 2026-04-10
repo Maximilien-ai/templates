@@ -22,6 +22,7 @@ VALID_TEMPLATE_TYPES = {"organization", "agent"}
 VALID_CATEGORIES = {"business", "technical", "personal", "science", "travel", "hobbies", "family"}
 VALID_EXECUTION_MODES = {"automated", "managed"}
 VALID_WORKFLOW_TYPES = {"once", "recurring", "conditional"}
+VALID_WORKFLOW_SCALING = {"singleton", "parallel"}
 
 
 class ValidationError(Exception):
@@ -546,6 +547,19 @@ def validate_core_template(data: dict[str, Any], path: Path, errors: list[str]) 
         workflow_type = workflow.get("type")
         if workflow_type is not None and workflow_type not in VALID_WORKFLOW_TYPES:
             fail(errors, path, f"{label}.type must be once, recurring, or conditional")
+        scaling = workflow.get("scaling")
+        if scaling is not None and scaling not in VALID_WORKFLOW_SCALING:
+            fail(errors, path, f"{label}.scaling must be singleton or parallel")
+        parallelism = workflow.get("parallelism")
+        if parallelism is not None:
+            if not isinstance(parallelism, int):
+                fail(errors, path, f"{label}.parallelism must be an integer")
+            elif parallelism < 1 or parallelism > 10:
+                fail(errors, path, f"{label}.parallelism must be between 1 and 10")
+        if scaling == "singleton" and isinstance(parallelism, int) and parallelism != 1:
+            fail(errors, path, f"{label}.parallelism must be 1 when scaling is singleton")
+        if scaling == "parallel" and isinstance(parallelism, int) and parallelism < 2:
+            fail(errors, path, f"{label}.parallelism must be at least 2 when scaling is parallel")
         owner = workflow.get("owner")
         if owner is not None:
             if not isinstance(owner, str) or owner not in agent_ids:

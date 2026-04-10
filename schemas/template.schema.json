@@ -337,6 +337,18 @@
             "recurring",
             "conditional"
           ]
+        },
+        "scaling": {
+          "type": "string",
+          "enum": [
+            "singleton",
+            "parallel"
+          ]
+        },
+        "parallelism": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
         }
       },
       "additionalProperties": true
